@@ -6,7 +6,7 @@ import { UserService } from 'src/app/user.service';
 @Component({
   selector: 'app-aps',
   templateUrl: './aps.component.html',
-  styleUrls: ['./aps.component.scss']
+  styleUrls: ['../admin-common.scss','./aps.component.scss']
 })
 export class ApsComponent implements OnInit {
   apsdefs: APS_DEF[] = [];
@@ -15,6 +15,10 @@ export class ApsComponent implements OnInit {
   basicData: any;
 
   stackedOptions: any;
+
+  displayAddAPS = false;
+
+  displayEditAPS = false;
 
   constructor(private userService: UserService) { }
 
@@ -170,5 +174,15 @@ export class ApsComponent implements OnInit {
       data: unknowns
     }]
     };
+  }
+  showAdd() {
+    this.displayAddAPS = !this.displayAddAPS;
+  }
+  showEdit() {
+    this.displayEditAPS= !this.displayEditAPS;
+  }
+  closeDlg() {
+    this.displayAddAPS = false;
+    this.displayEditAPS = false;
   }
 }
