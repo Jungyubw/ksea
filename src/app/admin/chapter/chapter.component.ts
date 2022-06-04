@@ -6,7 +6,7 @@ import { UserService } from 'src/app/user.service';
 @Component({
   selector: 'app-chapter',
   templateUrl: './chapter.component.html',
-  styleUrls: ['./chapter.component.scss']
+  styleUrls: ['../admin-common.scss', './chapter.component.scss']
 })
 export class ChapterComponent implements OnInit {
 
@@ -16,6 +16,10 @@ export class ChapterComponent implements OnInit {
   basicData: any;
 
   stackedOptions: any;
+
+  displayAddChapter = false;
+
+  displayEditChapter = false;
 
   constructor(private userService: UserService) { }
 
@@ -165,5 +169,16 @@ export class ChapterComponent implements OnInit {
         data: unknowns
       }]
       };
+    }
+
+    showAdd() {
+      this.displayAddChapter = !this.displayAddChapter;
+    }
+    showEdit() {
+      this.displayEditChapter = !this.displayEditChapter;
+    }
+    closeDlg() {
+      this.displayAddChapter = false;
+      this.displayEditChapter = false;
     }
 }

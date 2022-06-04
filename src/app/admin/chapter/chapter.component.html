@@ -1,71 +1,177 @@
-<button type="button" (click)="reload()">Reload!</button>
-
-
-    <h5>Chapter Member Chart</h5>
+<div class="wrap-con">
+    <div class="wrap-title">
+        <h2>Chapter Member Chart</h2>
+    <button class="btn_blue" type="button" (click)="reload()">Reload!</button>
+    </div>
     <p-chart type="bar" [data]="basicData" [options]="stackedOptions"></p-chart>
-
-
-
-    <h5>Chapter Info Tables</h5>
-<p-table [value]="chapters">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    Code
-                    <p-columnFilter type="text" field="chapterCode" display="chapterCode"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    Type
-                    <p-columnFilter type="text" field="chapterType" display="chapterType"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    Name
-                    <p-columnFilter type="text" field="chapterName" display="chapterName"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    Location
-                    <p-columnFilter type="text" field="chapterLoc" display="chapterLoc"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    Url
-                    <p-columnFilter type="text" field="chapterUrl" display="chapterUrl"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    Domain
-                    <p-columnFilter type="text" field="subDomain" display="subDomain"></p-columnFilter>
-                </div>
-            </th>
-            <th>President</th>
-            <th>MDId</th>
-            <th>DateApproved</th>
-            <th>KseaId</th>
-            <th>ProCode</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-cha>
-        <tr>
-            <td>{{cha.chapterCode}}</td>
-            <td>{{cha.chapterType}}</td>
-            <td>{{cha.chapterName}}</td>
-            <td>{{cha.chapterLoc}}</td>
-            <td>{{cha.chapterUrl}}</td>
-            <td>{{cha.subDomain}}</td>
-            <td>{{cha.presidentId}}</td>
-            <td>{{cha.MDId}}</td>
-            <td>{{cha.dateApproved}}</td>
-            <td>{{cha.kseaId}}</td>
-            <td>{{cha.pro_code}}</td>
-        </tr>
-    </ng-template>
-</p-table>
+    <div class="wrap-sub-title">
+        <h3>Chapter Info Tables</h3>
+        <button class="btn_gray" (click)="showAdd()">ADD</button>
+    </div>
+    <p-table [value]="chapters" class="table-data">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Code
+                        <p-columnFilter type="text" field="chapterCode" display="chapterCode"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Type
+                        <p-columnFilter type="text" field="chapterType" display="chapterType"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Name
+                        <p-columnFilter type="text" field="chapterName" display="chapterName"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Location
+                        <p-columnFilter type="text" field="chapterLoc" display="chapterLoc"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Url
+                        <p-columnFilter type="text" field="chapterUrl" display="chapterUrl"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Domain
+                        <p-columnFilter type="text" field="subDomain" display="subDomain"></p-columnFilter>
+                    </div>
+                </th>
+                <th>President</th>
+                <th>MDId</th>
+                <th>DateApproved</th>
+                <th>KseaId</th>
+                <th>ProCode</th>
+                <th>Edit</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cha>
+            <tr>
+                <td>{{cha.chapterCode}}</td>
+                <td>{{cha.chapterType}}</td>
+                <td>{{cha.chapterName}}</td>
+                <td>{{cha.chapterLoc}}</td>
+                <td>{{cha.chapterUrl}}</td>
+                <td>{{cha.subDomain}}</td>
+                <td>{{cha.presidentId}}</td>
+                <td>{{cha.MDId}}</td>
+                <td>{{cha.dateApproved}}</td>
+                <td>{{cha.kseaId}}</td>
+                <td>{{cha.pro_code}}</td>
+                <td> <button class="btn_gray" (click)="showEdit()">Edit</button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<!-- [Dev] 데이터 추가 Diglog -->
+<p-dialog header="Add chapter" [(visible)]="displayAddChapter"  [modal]="true">
+    <div class="wrap-dlg">
+        <ul class="input-data">
+            <li>
+                <label for="cahpterType">Type</label>
+                <input type="text" name="" id="chapterType" placeholder="Type">
+            </li>
+            <li>
+                <label for="cahpterName">Name</label>
+                <input type="text" name="" id="chapterName" placeholder="Name">
+            </li>
+            <li>
+                <label for="cahpterLoc">Location</label>
+                <input type="text" name="" id="chapterLoc" placeholder="Location">
+            </li>
+            <li>
+                <label for="chapterUrl">Url</label>
+                <input type="text" name="" id="chapterUrl" placeholder="Url">
+            </li>
+            <li>
+                <label for="subDomain">Domain</label>
+                <input type="text" name="" id="subDomain" placeholder="Domain">
+            </li>
+            <li>
+                <label for="presidentId">President</label>
+                <input type="text" name="" id="presidentId" placeholder="President">
+            </li>
+            <li>
+                <label for="MDId">MDId</label>
+                <input type="text" name="" id="MDId" placeholder="MDId">
+            </li>
+            <li>
+                <label for="dateApproved">Date Approved</label>
+                <input type="text" name="" id="dateApproved" placeholder="Date Approved">
+            </li>
+            <li>
+                <label for="kseaId">Ksea Id</label>
+                <input type="text" name="" id="kseaId" placeholder="Ksea Id">
+            </li>
+            <li>
+                <label for="pro_code">Pro code</label>
+                <input type="text" name="" id="pro_code" placeholder="Pro code">
+            </li>
+        </ul>
+        <div class="dlg-btn-g">
+            <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
+            <button class="btn_dlg_blue">Save</button>
+        </div>
+    </div>
+</p-dialog>
+<!-- [Dev] 데이터 수정 Diglog : 수정해야 하는 값이 인풋에 들어 있어야 함-->
+<p-dialog header="Edit chapter" [(visible)]="displayEditChapter"  [modal]="true">
+    <div class="wrap-dlg">
+        <ul class="input-data">
+            <li>
+                <label for="cahpterType">Type</label>
+                <input type="text" name="" id="chapterType" placeholder="Type">
+            </li>
+            <li>
+                <label for="cahpterName">Name</label>
+                <input type="text" name="" id="chapterName" placeholder="Name">
+            </li>
+            <li>
+                <label for="cahpterLoc">Location</label>
+                <input type="text" name="" id="chapterLoc" placeholder="Location">
+            </li>
+            <li>
+                <label for="chapterUrl">Url</label>
+                <input type="text" name="" id="chapterUrl" placeholder="Url">
+            </li>
+            <li>
+                <label for="subDomain">Domain</label>
+                <input type="text" name="" id="subDomain" placeholder="Domain">
+            </li>
+            <li>
+                <label for="presidentId">President</label>
+                <input type="text" name="" id="presidentId" placeholder="President">
+            </li>
+            <li>
+                <label for="MDId">MDId</label>
+                <input type="text" name="" id="MDId" placeholder="MDId">
+            </li>
+            <li>
+                <label for="dateApproved">Date Approved</label>
+                <input type="text" name="" id="dateApproved" placeholder="Date Approved">
+            </li>
+            <li>
+                <label for="kseaId">Ksea Id</label>
+                <input type="text" name="" id="kseaId" placeholder="Ksea Id">
+            </li>
+            <li>
+                <label for="pro_code">Pro code</label>
+                <input type="text" name="" id="pro_code" placeholder="Pro code">
+            </li>
+        </ul>
+        <div class="dlg-btn-g">
+            <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
+            <button class="btn_dlg_blue">Save</button>
+        </div>
+    </div>
+</p-dialog>
