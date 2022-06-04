@@ -1,0 +1,40 @@
+.wrap-organizsion {
+    width: 100%;
+}
+.list-leader {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 4em;
+}
+.list-leader li {
+    position: relative;
+}
+.list-leader li > img {
+    object-fit: cover;
+    width: 19rem;
+    height: 25rem;
+    border-radius: 2px;
+}
+.leader-info {
+    width: 19rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 1em 0.8rem;
+    background-color: rgba($color: #3C5DB7, $alpha: 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+.job-title {
+    font-size: 0.75rem;
+}
+.leader-name {
+    font-size: 1.25rem;
+}
+.leader-contact {
+
+}
