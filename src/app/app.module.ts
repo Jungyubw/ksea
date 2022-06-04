@@ -25,6 +25,8 @@ import { NgxCsvParserModule } from 'ngx-csv-parser';
 import { ChapterComponent } from './admin/chapter/chapter.component';
 import { TechnicalGroupComponent } from './admin/technical-group/technical-group.component';
 import { ApsComponent } from './admin/aps/aps.component';
+import { SpecialtyComponent } from './admin/specialty/specialty.component';
+import { MemberManagementComponent } from './admin/member-management/member-management.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { ApsComponent } from './admin/aps/aps.component';
     ChapterComponent,
     TechnicalGroupComponent,
     ApsComponent,
+    SpecialtyComponent,
+    MemberManagementComponent,
   ],
   imports: [
     BrowserModule,

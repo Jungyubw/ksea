@@ -1,3 +1,4 @@
+import { Data } from "@angular/router";
 import { APS_DEF } from "./aps_def";
 import { Chapter } from "./chapter";
 import { SPECIALITY_DEF } from "./specialty_def";
@@ -14,7 +15,8 @@ export interface User {
     koreanLast: string;
     chineaseName: string;
     gender: string;
-    dob: string;
+    dob?: string;
+    birth?: Date;
     title: string;
     email: string;
     homepageUrl: string;
@@ -52,13 +54,18 @@ export interface User {
     isYPG: string;
     memberStatus: string;
     accessRight: string;
-    registeredDate: string;
-    lastUpdated: string;
+    registeredDate?: string;
+    registeredDateFormatted?: Date;
+    lastUpdated?: string;
+    lastUpdatedFormatted?: Date;
     lastIPUsed: string;
     updatedBy: string;
-    lastVisit: string;
-    visitCount: string;
-    lastPaidDate: string;
+    lastVisit?: string;
+    lastVisitFormatted?: Date;
+    visitCount?: string;
+    visitCountFormatted?: Number;
+    lastPaidDate?: string;
+    lastPaidDateFormatted?: Date;
     middleName: string;
     workFax: string;
     birthPlace: string;
@@ -81,5 +88,13 @@ export interface User {
 
     apsList?: APS_DEF[];
 
+    aps1?: APS_DEF;
+    aps2?: APS_DEF;
+    aps3?: APS_DEF;
+
     specialtyList?: SPECIALITY_DEF[];
+    specialty1?: SPECIALITY_DEF;
+    specialty2?: SPECIALITY_DEF;
+    specialty3?: SPECIALITY_DEF;
+
 }

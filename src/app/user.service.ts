@@ -62,6 +62,52 @@ export class UserService {
             if(u.groupCode) u.group = this.getGroupByGroupCode(u.groupCode);
             u.apsList = this.getAPSsByMemberId(u.memberId);
             u.specialtyList = this.getSpecialtyByKseaId(u.KSEAId);
+            if(u.dob) {
+              u.dob = u.dob.replace("00:00:00.000", "");
+              if(u.dob === 'NULL') u.dob = undefined;
+              if(u.dob) u.birth = new Date(u.dob);
+            }
+
+            if(u.registeredDate) {
+              u.registeredDate = u.registeredDate.replace("00:00:00.000", "");
+              if(u.registeredDate === 'NULL') u.registeredDate = undefined;
+              if(u.registeredDate) u.registeredDateFormatted = new Date(u.registeredDate);
+            }
+
+            if(u.lastUpdated) {
+              u.lastUpdated = u.lastUpdated.replace("00:00:00.000", "");
+              if(u.lastUpdated === 'NULL') u.lastUpdated = undefined;
+              if(u.lastUpdated) u.lastUpdatedFormatted = new Date(u.lastUpdated);
+            }
+
+            if(u.lastVisit) {
+              u.lastVisit = u.lastVisit.replace("00:00:00.000", "");
+              if(u.lastVisit === 'NULL') u.lastVisit = undefined;
+              if(u.lastVisit) u.lastVisitFormatted = new Date(u.lastVisit);
+            }
+
+            if(u.lastPaidDate) {
+              u.lastPaidDate = u.lastPaidDate.replace("00:00:00.000", "");
+              if(u.lastPaidDate === 'NULL') u.lastPaidDate = undefined;
+              if(u.lastPaidDate) u.lastPaidDateFormatted = new Date(u.lastPaidDate);
+            }
+
+            if(u.visitCount) {
+              if(u.visitCount === 'NULL') u.visitCount = undefined;
+              if(u.visitCount) u.visitCountFormatted = new Number(u.visitCount);
+            }
+
+            if(u.apsList) {
+              if(u.apsList.length > 0) u.aps1 = u.apsList[0];
+              if(u.apsList.length > 1) u.aps2 = u.apsList[1];
+              if(u.apsList.length > 2) u.aps3 = u.apsList[2];
+            }
+
+            if(u.specialtyList) {
+              if(u.specialtyList.length > 0) u.specialty1 = u.specialtyList[0];
+              if(u.specialtyList.length > 1) u.specialty2 = u.specialtyList[1];
+              if(u.specialtyList.length > 2) u.specialty3 = u.specialtyList[2];
+            }
           });
           console.log(this.findUserByKSEAId("1237107"));
         });
@@ -83,6 +129,42 @@ export class UserService {
       }
     });
   };
+
+  getMSDEFs() {
+    return this.msDefs;
+  }
+
+  getspecialtyDEFs() {
+    let list:SPECIALITY_DEF[] = [];
+
+    this.ssDefs.forEach(item => {
+      const msFound = this.msDefs.find((def) => def.MainSpecialtyCode === item.MainSpecialtyCode);
+      
+      if(msFound) {
+        let found:SPECIALITY_DEF= {
+          SS_ID: item.SS_ID,
+          SubSpecialtyCode: item.SubSpecialtyCode,
+          SubSpecialtyDesc: item.SubSpecialtyDesc,
+          MainSpecialtyCode: item.MainSpecialtyCode,
+          MainSpecialtyDesc: msFound.MainSpecialtyDesc,
+          NRFCode: item.NRFCode
+        };    
+        list.push(found);
+      }
+      else {
+        let found:SPECIALITY_DEF= {
+          SS_ID: item.SS_ID,
+          SubSpecialtyCode: item.SubSpecialtyCode,
+          SubSpecialtyDesc: item.SubSpecialtyDesc,
+          MainSpecialtyCode: item.MainSpecialtyCode,
+          NRFCode: item.NRFCode
+        }; 
+        list.push(found);
+      }
+    });
+
+    return list;
+  }
 
   getAPSDEFs() {
     return this.apsDefs;
@@ -131,7 +213,7 @@ export class UserService {
       specialtyList.forEach((i) => {
         const ssFound = this.ssDefs.find((def) => def.SS_ID === i.SS_ID);
         if(ssFound) {
-          const msFound = this.msDefs.find((def) => def.MainSpecialtyCode === ssFound?.MainSpecialtyCode);
+          const msFound = this.msDefs.find((def) => def.MainSpecialtyCode === ssFound.MainSpecialtyCode);
           if(msFound) {
             let found:SPECIALITY_DEF= {
               SS_ID: ssFound.SS_ID,

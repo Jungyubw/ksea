@@ -3,6 +3,6 @@ export interface SPECIALITY_DEF {
     SubSpecialtyCode: string,
     SubSpecialtyDesc: string,
     MainSpecialtyCode: string,
-    MainSpecialtyDesc: string,
+    MainSpecialtyDesc?: string,
     NRFCode: string
 }

@@ -1,0 +1,598 @@
+<button type="button" (click)="reload()">Reload!</button>
+<h5>Users Tables</h5>
+<p-table [value]="users" [(selection)]="selectedUsers" dataKey="code" [paginator]="true" [rows]="50" [showCurrentPageReport]="true" responsiveLayout="scroll"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[50,100,150]">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 3rem">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    MemberId
+                    <p-columnFilter type="text" field="memberId" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    KSEAId
+                    <p-columnFilter type="text" field="KSEAId" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    LoginId
+                    <p-columnFilter type="text" field="loginId" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    First Name
+                    <p-columnFilter type="text" field="firstName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Last Name
+                    <p-columnFilter type="text" field="lastName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Gender
+                    <p-columnFilter type="text" field="gender" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Birth
+                    <p-columnFilter type="date" field="birth" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    title
+                    <p-columnFilter type="text" field="title" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    email
+                    <p-columnFilter type="text" field="email" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Url
+                    <p-columnFilter type="text" field="homepageUrl" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homePhone
+                    <p-columnFilter type="text" field="homePhone" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homeCell
+                    <p-columnFilter type="text" field="homeCell" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homeFax
+                    <p-columnFilter type="text" field="homeFax" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homeStreet
+                    <p-columnFilter type="text" field="homeStreet" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homeCity
+                    <p-columnFilter type="text" field="homeCity" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homeState
+                    <p-columnFilter type="text" field="homeState" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homeProvince
+                    <p-columnFilter type="text" field="homeProvince" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homeZip
+                    <p-columnFilter type="text" field="homeZip" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    billFirstName
+                    <p-columnFilter type="text" field="billFirstName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    billLastName
+                    <p-columnFilter type="text" field="billLastName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    billStreet
+                    <p-columnFilter type="text" field="billStreet" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    billCity
+                    <p-columnFilter type="text" field="billCity" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    billState
+                    <p-columnFilter type="text" field="billState" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    billProvince
+                    <p-columnFilter type="text" field="billProvince" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    billZip
+                    <p-columnFilter type="text" field="billZip" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    affiliation
+                    <p-columnFilter type="text" field="affiliation" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    department
+                    <p-columnFilter type="text" field="department" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    jobTitle
+                    <p-columnFilter type="text" field="jobTitle" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workHomeUrl
+                    <p-columnFilter type="text" field="workHomeUrl" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workEmail
+                    <p-columnFilter type="text" field="workEmail" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workPhone
+                    <p-columnFilter type="text" field="workPhone" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workStreet
+                    <p-columnFilter type="text" field="workStreet" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workCity
+                    <p-columnFilter type="text" field="workCity" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workState
+                    <p-columnFilter type="text" field="workState" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workProvince
+                    <p-columnFilter type="text" field="workProvince" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workZip
+                    <p-columnFilter type="text" field="workZip" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    prefContact
+                    <p-columnFilter type="text" field="prefContact" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    isInMemberDir
+                    <p-columnFilter type="text" field="isInMemberDir" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    memberType
+                    <p-columnFilter type="text" field="memberType" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    isYPG
+                    <p-columnFilter type="text" field="isYPG" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    memberStatus
+                    <p-columnFilter type="text" field="memberStatus" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    accessRight
+                    <p-columnFilter type="text" field="accessRight" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    registeredDate
+                    <p-columnFilter type="date" field="registeredDateFormatted" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    lastUpdated
+                    <p-columnFilter type="date" field="lastUpdatedFormatted" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    lastIPUsed
+                    <p-columnFilter type="text" field="lastIPUsed" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    updatedBy
+                    <p-columnFilter type="text" field="updatedBy" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    lastVisit
+                    <p-columnFilter type="date" field="lastVisitFormatted" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    visitCount
+                    <p-columnFilter type="numeric" field="visitCountFormatted" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    lastPaidDate
+                    <p-columnFilter type="date" field="lastPaidDateFormatted" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    middleName
+                    <p-columnFilter type="text" field="middleName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workFax
+                    <p-columnFilter type="text" field="workFax" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    birthPlace
+                    <p-columnFilter type="text" field="birthPlace" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    workCountry
+                    <p-columnFilter type="text" field="workCountry" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    citizenship
+                    <p-columnFilter type="text" field="citizenship" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    homeCountry
+                    <p-columnFilter type="text" field="homeCountry" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    remark
+                    <p-columnFilter type="text" field="remark" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    profileStatus
+                    <p-columnFilter type="text" field="profileStatus" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    e_signature
+                    <p-columnFilter type="text" field="e_signature" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    kofst_agree
+                    <p-columnFilter type="text" field="kofst_agree" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    subscription
+                    <p-columnFilter type="text" field="subscription" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    chapter
+                    <p-columnFilter type="text" field="chapter.chapterName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Group
+                    <p-columnFilter type="text" field="group.groupCode" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    1st APS
+                    <p-columnFilter type="text" field="aps1.apsName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    2nd APS
+                    <p-columnFilter type="text" field="aps2.apsName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    3rd APS
+                    <p-columnFilter type="text" field="aps3.apsName" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    1st Main Specialty
+                    <p-columnFilter type="text" field="specialty1.MainSpecialtyDesc" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    1st Sub Specialty
+                    <p-columnFilter type="text" field="specialty1.SubSpecialtyDesc" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    2nd Main Specialty
+                    <p-columnFilter type="text" field="specialty2.MainSpecialtyDesc" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    2nd Sub Specialty
+                    <p-columnFilter type="text" field="specialty2.SubSpecialtyDesc" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    3rd Main Specialty
+                    <p-columnFilter type="text" field="specialty3.MainSpecialtyDesc" display="menu"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    3rd Sub Specialty
+                    <p-columnFilter type="text" field="specialty3.SubSpecialtyDesc" display="menu"></p-columnFilter>
+                </div>
+            </th>
+
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    specialtyKeywords
+                    <p-columnFilter type="text" field="specialtyKeywords" display="menu"></p-columnFilter>
+                </div>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+        <tr>
+            <td>
+                <p-tableCheckbox [value]="user"></p-tableCheckbox>
+            </td>
+            <td>{{user.memberId}}</td>
+            <td>{{user.KSEAId}}</td>
+            <td>{{user.loginId}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.birth| date: 'MM/dd/yyyy'}}</td>
+            <td>{{user.title}}</td>
+            <td>{{user.email}}</td>
+
+            <td>{{user.homepageUrl}}</td>
+            <td>{{user.homePhone}}</td>
+            <td>{{user.homeCell}}</td>
+            <td>{{user.homeFax}}</td>
+            <td>{{user.homeStreet}}</td>
+            <td>{{user.homeCity}}</td>
+            <td>{{user.homeState}}</td>
+            <td>{{user.homeProvince}}</td>
+            <td>{{user.homeZip}}</td>
+
+            <td>{{user.billFirstName}}</td>
+            <td>{{user.billLastName}}</td>
+            <td>{{user.billStreet}}</td>
+            <td>{{user.billCity}}</td>
+            <td>{{user.billState}}</td>
+            <td>{{user.billProvince}}</td>
+            <td>{{user.billZip}}</td>
+
+            <td>{{user.affiliation}}</td>
+            <td>{{user.department}}</td>
+            <td>{{user.jobTitle}}</td>
+
+            <td>{{user.workHomeUrl}}</td>
+            <td>{{user.workEmail}}</td>
+            <td>{{user.workPhone}}</td>
+            <td>{{user.workStreet}}</td>
+            <td>{{user.workCity}}</td>
+            <td>{{user.workState}}</td>
+            <td>{{user.workProvince}}</td>
+            <td>{{user.workZip}}</td>
+
+            <td>{{user.prefContact}}</td>
+            <td>{{user.isInMemberDir}}</td>
+            <td>{{user.memberType}}</td>
+            <td>{{user.isYPG}}</td>
+            <td>{{user.memberStatus}}</td>
+            <td>{{user.accessRight}}</td>
+            <td>{{user.registeredDateFormatted| date: 'MM/dd/yyyy'}}</td>
+            <td>{{user.lastUpdatedFormatted| date: 'MM/dd/yyyy'}}</td>
+            <td>{{user.lastIPUsed}}</td>
+            <td>{{user.updatedBy}}</td>
+            <td>{{user.lastVisitFormatted| date: 'MM/dd/yyyy'}}</td>
+            <td>{{user.visitCountFormatted}}</td>
+            <td>{{user.lastPaidDateFormatted| date: 'MM/dd/yyyy'}}</td>
+
+            <td>{{user.middleName}}</td>
+            <td>{{user.workFax}}</td>
+            <td>{{user.birthPlace}}</td>
+            <td>{{user.workCountry}}</td>
+            <td>{{user.citizenship}}</td>
+            <td>{{user.homeCountry}}</td>
+            <td>{{user.remark}}</td>
+            <td>{{user.profileStatus}}</td>
+            <td>{{user.e_signature}}</td>
+            <td>{{user.kofst_agree}}</td>
+            <td>{{user.subscription}}</td>
+
+            <td>
+                <div *ngIf="user.chapter">
+                    {{user.chapter.chapterName}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.group">
+                    {{user.group.groupCode}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.aps1">
+                    {{user.aps1.apsName}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.aps2">
+                    {{user.aps2.apsName}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.aps3">
+                    {{user.aps3.apsName}}
+                </div>
+            </td>
+
+            <td>
+                <div *ngIf="user.specialty1">
+                    {{user.specialty1.MainSpecialtyDesc}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.specialty1">
+                    {{user.specialty1.SubSpecialtyDesc}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.specialty2">
+                    {{user.specialty2.MainSpecialtyDesc}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.specialty2">
+                    {{user.specialty2.SubSpecialtyDesc}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.specialty3">
+                    {{user.specialty3.MainSpecialtyDesc}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="user.specialty3">
+                    {{user.specialty3.SubSpecialtyDesc}}
+                </div>
+            </td>
+
+            <td>{{user.specialtyKeywords}}</td>
+
+
+
+<!--
+
+    apsList?: APS_DEF[];
+    specialtyList?: SPECIALITY_DEF[];
+    -->
+        </tr>
+    </ng-template>
+</p-table>
