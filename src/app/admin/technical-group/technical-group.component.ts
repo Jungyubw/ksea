@@ -22,8 +22,6 @@ export class TechnicalGroupComponent implements OnInit {
 
   displayEditTG = false;
 
-  displaySendEmail = false;
-
   constructor(private userService: UserService) { }
 
   ngOnInit() {
@@ -179,12 +177,8 @@ export class TechnicalGroupComponent implements OnInit {
   showEdit() {
     this.displayEditTG= !this.displayEditTG;
   }
-  showSendEmail() {
-    this.displaySendEmail  = !this.displaySendEmail ;
-  }
   closeDlg() {
     this.displayAddTG = false;
     this.displayEditTG = false;
-    this.displaySendEmail = false;
   }
 }

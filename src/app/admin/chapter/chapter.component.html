@@ -2,7 +2,6 @@
     <div class="wrap-title">
         <h2>Chapter Member Chart</h2>
         <button class="btn_blue" type="button" (click)="reload()">Reload!</button>
-        <button class="btn_deep_gray" type="button" (click)="showSendEmail()">Send Email</button>
     </div>
     <p-chart type="bar" [data]="basicData" [options]="stackedOptions"></p-chart>
     <div class="wrap-sub-title">
@@ -182,28 +181,5 @@
             <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
             <button class="btn_dlg_blue">Save</button>
         </div>
-    </div>
-</p-dialog>
-<!-- [Dev] Email -->
-<p-dialog header="Send Email" [(visible)]="displaySendEmail"  [modal]="true">
-    <div class="wrap-dlg">
-        <ul class="input-email">
-            <li>
-                <label for="mailTo">To</label>
-                <input type="text" name="" id="mailTo" placeholder="abc@ksea.org">
-            </li>
-            <li>
-                <label for="mailTitle">Title</label>
-                <input type="text" name="" id="mailTitle" placeholder="Title">
-            </li>
-            <li>
-                <label for="mailTxt">Message</label>
-                <textarea name="" id="mailTex" rows="5"></textarea>
-            </li>
-        </ul>
-    </div>
-    <div class="dlg-btn-g">
-        <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
-        <button class="btn_dlg_blue">Send</button>
     </div>
 </p-dialog>

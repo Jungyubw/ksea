@@ -20,8 +20,6 @@ export class ApsComponent implements OnInit {
 
   displayEditAPS = false;
 
-  displaySendEmail = false;
-
   constructor(private userService: UserService) { }
 
     ngOnInit() {
@@ -183,12 +181,8 @@ export class ApsComponent implements OnInit {
   showEdit() {
     this.displayEditAPS= !this.displayEditAPS;
   }
-  showSendEmail() {
-    this.displaySendEmail  = !this.displaySendEmail ;
-  }
   closeDlg() {
     this.displayAddAPS = false;
     this.displayEditAPS = false;
-    this.displaySendEmail = false;
   }
 }

@@ -22,7 +22,6 @@ export class SpecialtyComponent implements OnInit {
 
   displayEditSpecialty = false;
 
-  displaySendEmail = false;
 
   constructor(private userService: UserService) { }
 
@@ -186,13 +185,9 @@ export class SpecialtyComponent implements OnInit {
   showEdit() {
     this.displayEditSpecialty = !this.displayEditSpecialty;
   }
-  showSendEmail() {
-    this.displaySendEmail  = !this.displaySendEmail ;
-  }
   closeDlg() {
     this.displayAddSpecialty = false;
     this.displayEditSpecialty = false;
-    this.displaySendEmail = false;
   }
 }
 
