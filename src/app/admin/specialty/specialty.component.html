@@ -1,60 +1,157 @@
-<button type="button" (click)="reload()">Reload!</button>
-
-
-<h5>Specialty Member Chart</h5>
-<p-chart type="bar" [data]="basicData" [options]="stackedOptions"></p-chart>
-
-
-<h5>Specialty Info Tables</h5>
-<p-table [value]="specialtyDefs">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    ID
-                    <p-columnFilter type="text" field="SS_ID" display="SS_ID"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    SubSpecialty Code
-                    <p-columnFilter type="text" field="SubSpecialtyCode" display="SubSpecialtyCode"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    SubSpecialty Desc
-                    <p-columnFilter type="text" field="SubSpecialtyDesc" display="SubSpecialtyDesc"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    MainSpecialty Code
-                    <p-columnFilter type="text" field="MainSpecialtyCode" display="MainSpecialtyCode"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    MainSpecialty Desc
-                    <p-columnFilter type="text" field="MainSpecialtyDesc" display="MainSpecialtyDesc"></p-columnFilter>
-                </div>
-            </th>
-            <th>
-                <div class="flex justify-content-center align-items-center">
-                    NRFCode
-                    <p-columnFilter type="text" field="NRFCode" display="NRFCode"></p-columnFilter>
-                </div>
-            </th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-item>
-        <tr>
-            <td>{{item.SS_ID}}</td>
-            <td>{{item.SubSpecialtyCode}}</td>
-            <td>{{item.SubSpecialtyDesc}}</td>
-            <td>{{item.MainSpecialtyCode}}</td>
-            <td>{{item.MainSpecialtyDesc}}</td>
-            <td>{{item.NRFCode}}</td>
-        </tr>
-    </ng-template>
-</p-table>
+<div class="wrap-con">
+    <div class="wrap-title">
+        <h2>Specialty Member Chart</h2>
+        <button class="btn_blue" type="button" (click)="reload()">Reload!</button>
+        <button class="btn_deep_gray" type="button" (click)="showSendEmail()">Send Email</button>
+    </div>
+    <p-chart type="bar" [data]="basicData" [options]="stackedOptions"></p-chart>
+    <div class="wrap-sub-title">
+        <h3>Specialty Info Tables</h3>
+        <!-- <button class="btn_gray" (click)="showAdd()">ADD</button> -->
+    </div>
+    <p-table [value]="specialtyDefs" class="table-data">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        ID
+                        <p-columnFilter type="text" field="SS_ID" display="SS_ID"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        SubSpecialty Code
+                        <p-columnFilter type="text" field="SubSpecialtyCode" display="SubSpecialtyCode"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        SubSpecialty Desc
+                        <p-columnFilter type="text" field="SubSpecialtyDesc" display="SubSpecialtyDesc"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        MainSpecialty Code
+                        <p-columnFilter type="text" field="MainSpecialtyCode" display="MainSpecialtyCode"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        MainSpecialty Desc
+                        <p-columnFilter type="text" field="MainSpecialtyDesc" display="MainSpecialtyDesc"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        NRFCode
+                        <p-columnFilter type="text" field="NRFCode" display="NRFCode"></p-columnFilter>
+                    </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-item>
+            <tr>
+                <td>{{item.SS_ID}}</td>
+                <td>{{item.SubSpecialtyCode}}</td>
+                <td>{{item.SubSpecialtyDesc}}</td>
+                <td>{{item.MainSpecialtyCode}}</td>
+                <td>{{item.MainSpecialtyDesc}}</td>
+                <td>{{item.NRFCode}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<!-- [Dev] 데이터 추가 Diglog -->
+<p-dialog header="Add chapter" [(visible)]="displayAddSpecialty"  [modal]="true">
+    <div class="wrap-dlg">
+        <ul class="input-data">
+            <li>
+                <label for="SS_ID">ID</label>
+                <input type="text" name="" id="SS_ID" placeholder="ID">
+            </li>
+            <li>
+                <label for="SubSpecialtyCode">Sub Specialty Code</label>
+                <input type="text" name="" id="SubSpecialtyCode" placeholder="Sub Specialty Code">
+            </li>
+            <li>
+                <label for="SubSpecialtyDesc">Sub Specialty discription</label>
+                <input type="text" name="" id="SubSpecialtyDesc" placeholder="Sub Specialty discription">
+            </li>
+            <li>
+                <label for="MainSpecialtyCode">Main Specialty Code</label>
+                <input type="text" name="" id="MainSpecialtyCode" placeholder="Main Specialty Code">
+            </li>
+            <li>
+                <label for="MainSpecialtyDesc">Main Specialty discription</label>
+                <input type="text" name="" id="MainSpecialtyDesc" placeholder="Main Specialty discription">
+            </li>
+            <li>
+                <label for="NRFCode">NRF Code</label>
+                <input type="text" name="" id="NRFCode" placeholder="NRF Code">
+            </li>
+        </ul>
+        <div class="dlg-btn-g">
+            <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
+            <button class="btn_dlg_blue">Save</button>
+        </div>
+    </div>
+</p-dialog>
+<!-- [Dev] 데이터 수정 Diglog : 수정해야 하는 값이 인풋에 들어 있어야 함-->
+<p-dialog header="Add chapter" [(visible)]="displayEditSpecialty"  [modal]="true">
+    <div class="wrap-dlg">
+        <ul class="input-data">
+            <li>
+                <label for="SS_ID">ID</label>
+                <span>01</span>
+            </li>
+            <li>
+                <label for="SubSpecialtyCode">Sub Specialty Code</label>
+                <input type="text" name="" id="SubSpecialtyCode" placeholder="Sub Specialty Code">
+            </li>
+            <li>
+                <label for="SubSpecialtyDesc">Sub Specialty discription</label>
+                <input type="text" name="" id="SubSpecialtyDesc" placeholder="Sub Specialty discription">
+            </li>
+            <li>
+                <label for="MainSpecialtyCode">Main Specialty Code</label>
+                <input type="text" name="" id="MainSpecialtyCode" placeholder="Main Specialty Code">
+            </li>
+            <li>
+                <label for="MainSpecialtyDesc">Main Specialty discription</label>
+                <input type="text" name="" id="MainSpecialtyDesc" placeholder="Main Specialty discription">
+            </li>
+            <li>
+                <label for="NRFCode">NRF Code</label>
+                <input type="text" name="" id="NRFCode" placeholder="NRF Code">
+            </li>
+        </ul>
+        <div class="dlg-btn-g">
+            <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
+            <button class="btn_dlg_blue">Save</button>
+        </div>
+    </div>
+</p-dialog>
+<!-- [Dev] Email -->
+<p-dialog header="Send Email" [(visible)]="displaySendEmail"  [modal]="true">
+    <div class="wrap-dlg">
+        <ul class="input-email">
+            <li>
+                <label for="mailTo">To</label>
+                <input type="text" name="" id="mailTo" placeholder="abc@ksea.org">
+            </li>
+            <li>
+                <label for="mailTitle">Title</label>
+                <input type="text" name="" id="mailTitle" placeholder="Title">
+            </li>
+            <li>
+                <label for="mailTxt">Message</label>
+                <textarea name="" id="mailTex" rows="5"></textarea>
+            </li>
+        </ul>
+    </div>
+    <div class="dlg-btn-g">
+        <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
+        <button class="btn_dlg_blue">Send</button>
+    </div>
+</p-dialog>

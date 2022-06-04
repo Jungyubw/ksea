@@ -7,8 +7,12 @@
     top: 0;
     left: 0;
     width: 15rem;
+    z-index: 2;
 }
 .wrap-contents {
     padding-left: 15rem;
     background-color: #F7F7F7;
+}
+body {
+    background-color: #F7F7F7 !important;
 }

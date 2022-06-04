@@ -21,6 +21,8 @@ export class ChapterComponent implements OnInit {
 
   displayEditChapter = false;
 
+  displaySendEmail = false;
+
   constructor(private userService: UserService) { }
 
     ngOnInit() {
@@ -177,8 +179,12 @@ export class ChapterComponent implements OnInit {
     showEdit() {
       this.displayEditChapter = !this.displayEditChapter;
     }
+    showSendEmail() {
+      this.displaySendEmail  = !this.displaySendEmail ;
+    }
     closeDlg() {
       this.displayAddChapter = false;
       this.displayEditChapter = false;
+      this.displaySendEmail = false;
     }
 }

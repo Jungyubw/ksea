@@ -7,7 +7,7 @@ import { UserService } from 'src/app/user.service';
 @Component({
   selector: 'app-specialty',
   templateUrl: './specialty.component.html',
-  styleUrls: ['./specialty.component.scss']
+  styleUrls: ['../admin-common.scss','./specialty.component.scss']
 })
 export class SpecialtyComponent implements OnInit {
   specialtyDefs: SPECIALITY_DEF[] = [];
@@ -17,6 +17,12 @@ export class SpecialtyComponent implements OnInit {
 
   stackedOptions: any;
   msDefs: MS_DEF[] = [];
+
+  displayAddSpecialty = false;
+
+  displayEditSpecialty = false;
+
+  displaySendEmail = false;
 
   constructor(private userService: UserService) { }
 
@@ -173,6 +179,20 @@ export class SpecialtyComponent implements OnInit {
       data: unknowns
     }]
     };
+  }
+  showAdd() {
+    this.displayAddSpecialty = !this.displayAddSpecialty;
+  }
+  showEdit() {
+    this.displayEditSpecialty = !this.displayEditSpecialty;
+  }
+  showSendEmail() {
+    this.displaySendEmail  = !this.displaySendEmail ;
+  }
+  closeDlg() {
+    this.displayAddSpecialty = false;
+    this.displayEditSpecialty = false;
+    this.displaySendEmail = false;
   }
 }
 
