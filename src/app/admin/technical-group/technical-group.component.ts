@@ -6,7 +6,7 @@ import { UserService } from 'src/app/user.service';
 @Component({
   selector: 'app-technical-group',
   templateUrl: './technical-group.component.html',
-  styleUrls: ['./technical-group.component.scss']
+  styleUrls: ['../admin-common.scss', './technical-group.component.scss']
 })
 export class TechnicalGroupComponent implements OnInit {
 
@@ -17,6 +17,10 @@ export class TechnicalGroupComponent implements OnInit {
   basicData: any;
 
   stackedOptions: any;
+
+  displayAddTG = false;
+
+  displayEditTG = false;
 
   constructor(private userService: UserService) { }
 
@@ -167,5 +171,14 @@ export class TechnicalGroupComponent implements OnInit {
     }]
     };
   }
-
+  showAdd() {
+    this.displayAddTG = !this.displayAddTG;
+  }
+  showEdit() {
+    this.displayEditTG= !this.displayEditTG;
+  }
+  closeDlg() {
+    this.displayAddTG = false;
+    this.displayEditTG = false;
+  }
 }
