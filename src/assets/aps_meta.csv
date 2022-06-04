@@ -1,0 +1,33 @@
+﻿apsID,apsName,apsFullName,apsURL,temp,presidentID,isActive
+1,AKPA,Association of Korean Physicists in America,http://www.akpa.org,NULL,66350,1
+2,KLAM,Korean Life Scientists Association of Maryland,,NULL,101941,1
+3,KASBP,Korean American Society for Biotech & Phamaceuticals,http://www.kasbp.org,NULL,69823,1
+4,KOCSEA,Korean Computer Scientists & Engineers Association in America,http://www.kocseaa.org/home,NULL,75010,1
+5,KOEA,Korean-American Oil & Gas Engineers Association,http://koea.us,NULL,67726,1
+6,KOTAA,Korean Transportation Association in America,http://www.kotaa.org,NULL,77328,1
+7,KWISE,Korean-American Women in Science and Engineering,http://www.kwise.org,NULL,82936,1
+8,NIH-KSA,NIH-Korean Scientists Association,http://www.nih-ksa.org,NULL,76970,1
+9,NYKB,New York Korean Biologists,http://www.nykb.org,NULL,101465,1
+10,KISS,Korean International Statistical Society,,NULL,66342,1
+11,KOPANA,Korean Pathologists Association of North America,,NULL,72770,1
+12,KEPS,Korean-American  Energy Exploration & Production Society,,NULL,64430,1
+13,KASBI,Korean-American Society for Biomedical Informatics,,NULL,65318,1
+14,KAIPBA,Korean-American Intellectual Property Bar Association,,NULL,84506,1
+15,KAMSA,Korean-American Mathematical Scientist Association,,NULL,68850,1
+16,RTP B&B,Research Triangle Park Bioscience and Biotechnology Meeting,http://www.rtpbnb.org,NULL,76493,1
+19,KAFTA,Korean-American Food Technologists Association,"http://www.kafta-us.org/ ",NULL,93562,1
+22,KACEPMA,"Korean American Construction, Engineering, and Project Management Association","http://www.kacepma.org ",NULL,84358,1
+23,SDKoBA,San Diego Korean Biomedical Association,,NULL,92704,1
+24,KBMES,Korean-American Biomedical Engineering Society,,NULL,69900,1
+25,KBM,Korean Biological Sciences Research Group at Michigan,,NULL,93452,1
+26,TeK One,TeK One,http://www.tekone.org,NULL,70518,1
+27,KAGES,Korea-America Association for Geospatial and Environmental Sciences,,NULL,92120,1
+28,KAMPiNA,Korean Association of Medical Physicists in North America,,NULL,87392,1
+29,KBCAC,"Korean Bioscientists & Chemists  Association in Chicago ",NULL,NULL,83655,1
+30,KITEE,"Korean American Innovative Technology Engineers and Entrepreneurs  ",http://www.kitee.org/,NULL,64628,1
+17,KOLIS,"Korean Life Scientists in the Bay Area ",http://www.kolis.org,NULL,102907,1
+18,AKN,"Association of Korean Neuroscientists ",,NULL,65171,1
+20,KSCEE,Korean-American Society of Civil and Environmental Engineers,http://www.kscee.org,NULL,66111,1
+21,KAMS,Korean-American Materials Society,,NULL,70205,1
+31,KAPAL,Korean-American Professional Association in Life Sciences,http://www.kapal.org,NULL,85731,1
+32,IT,Information Technology,,NULL,102910,1

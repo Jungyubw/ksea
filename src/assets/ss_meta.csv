@@ -1,0 +1,594 @@
+﻿SS_ID,SubSpecialtyCode,SubSpecialtyDesc,MainSpecialtyCode,NRFCode
+1,1,Classical and Real Analysis,101,2008AG10101
+2,2,Complex and Harmonic Analysis,101,2008AG10102
+3,3,Functional Analysis,101,2008AG10103
+4,4,Variational and Non-linear Analysis,101,2008AG10104
+5,5,Ordinary Differential Equation and Dynamical Systems,101,2008AG10105
+6,6,Partial Differential Equations,101,2008AG10106
+7,7,Analysis on Manifolds,101,2008AG10107
+8,8,Lie Theory,101,2008AG10108
+9,9,General Topology,101,2008AG10109
+10,10,Algebraic Topology,101,2008AG10110
+11,11,Geometric Topology,101,2008AG10111
+12,99,"Mathematics -I, Others",101,2008AG10199
+13,1,Classical Geometry,102,2008AG10201
+14,2,Differential Geometry,102,2008AG10202
+15,3,Complex Geometry,102,2008AG10203
+16,4,Linear and Multi-Linear Algebra,102,2008AG10204
+17,5,Mathematical Logic and Set Theory,102,2008AG10205
+18,6,Number Theory,102,2008AG10206
+19,7,Combinatorics,102,2008AG10207
+20,8,Groups and Representations,102,2008AG10208
+21,9,Algebraic Geometry and Commutative Rings,102,2008AG10209
+22,10,Associative Rings,102,2008AG10210
+23,11,Lie Algebra and Nonassociative Rings,102,2008AG10211
+24,99,"Mathematics -II, Others",102,2008AG10299
+25,1,Continuum Mechanics,103,2008AG10301
+26,2,Numerical Analysis,103,2008AG10302
+27,3,Mathematical Programming and Optimization,103,2008AG10303
+28,4,Discrete Mathematics and Algorithm,103,2008AG10304
+29,5,Cryptography,103,2008AG10305
+30,6,Mathematics in Computer Science,103,2008AG10306
+31,7,Mathematics in Natural Science,103,2008AG10307
+32,8,Mathematics in Engineering,103,2008AG10308
+33,9,Mathematics in Social Science,103,2008AG10309
+34,99,"Applied Math, Others",103,2008AG10399
+35,1,Probability Theory and Stochastic Process,104,2008AG10401
+36,2,Statistical Theory,104,2008AG10402
+37,3,Nonparametric Statistics,104,2008AG10403
+38,4,Design of Experiments and Linear Models,104,2008AG10404
+39,5,Time Series Analysis,104,2008AG10405
+40,6,Multivariate Statistics,104,2008AG10406
+41,7,Survey Methodology,104,2008AG10407
+42,8,Computer Statistics,104,2008AG10408
+43,9,Information Statistics,104,2008AG10409
+44,10,Sociostatistics,104,2008AG10410
+45,11,Biostatistics,104,2008AG10411
+46,12,Industrial Statistics,104,2008AG10412
+47,99,"Statistics, Others",104,2008AG10499
+48,1,Atomic and Molecular Physics,111,2008AG11101
+49,2,Nuclear Physics,111,2008AG11102
+50,3,Nuclear Reactions and Scattering,111,2008AG11103
+51,4,Particle Physics,111,2008AG11104
+52,5,Intermediate Energy Reactions,111,2008AG11105
+53,6,Weak Interactions,111,2008AG11106
+54,7,Plasma Physics,111,2008AG11107
+55,8,Experimental Methods and Instrumentation,111,2008AG11108
+56,9,Acoustics,111,2008AG11109
+57,10,Optics,111,2008AG11110
+58,11,Lasers,111,2008AG11111
+59,12,Photonics,111,2008AG11112
+60,13,Biophysics,111,2008AG11113
+61,14,Accelerator and Beam Physics,111,2008AG11114
+62,99,"Physics-Basic, Others",111,2008AG11199
+63,1,"Kinetic and Transport Theory of Fluids, Physical Properties of Gases",112,2008AG11201
+64,2,Theory of Elementary Particles and Fields,112,2008AG11202
+65,3,Classical and Quantum Physics,112,2008AG11203
+66,4,Relativity and Gravitation,112,2008AG11204
+67,5,Statistical Mechanics and Thermodynamics,112,2008AG11205
+68,6,Computational Physics,112,2008AG11206
+69,7,Mathematical Physics,112,2008AG11207
+70,99,"Physics - Theory & Computation, Others",112,2008AG11299
+71,1,Planetary and Solar System,113,2008AG11301
+72,2,Stellar,113,2008AG11302
+73,3,Galactic,113,2008AG11303
+74,4,Extra Galactic and Cosmology,113,2008AG11304
+75,5,Instrumentation,113,2008AG11305
+76,6,Upper Atmosphere,113,2008AG11306
+77,7,Space Plasmas,113,2008AG11307
+78,8,Space Sciences,113,2008AG11308
+79,9,High Energy Astrophysics,113,2008AG11309
+80,10,Radio,113,2008AG11310
+81,11,Interstellar Matter,113,2008AG11311
+82,99,"Physics -Astronomy, Others",113,2008AG11399
+83,1,Superconductivity,114,2008AG11401
+84,2,Electronic Properties of Solids,114,2008AG11402
+85,3,"Surfaces, Interfaces and Thin Films",114,2008AG11403
+86,4,Semiconductors,114,2008AG11404
+87,5,Magnetic Properties and Magnetic Materials,114,2008AG11405
+88,6,Optical Properties,114,2008AG11406
+89,7,Transport Properties,114,2008AG11407
+90,8,Superfluids,114,2008AG11408
+91,9,Low Temperature Physics,114,2008AG11409
+92,10,Statistical Mechanics and Phase Transitions,114,2008AG11410
+93,11,Soft Condensed Matter,114,2008AG11411
+94,12,Mesoscopic Physics,114,2008AG11412
+95,13,Ferroelectric and Related Materials,114,2008AG11413
+96,14,Disordered Systems,114,2008AG11414
+97,99,"Physics -Condensed Matter, Others",114,2008AG11499
+98,1,Chemical and Statistical Thermodynamics,121,2008AG12101
+99,2,Quantum and Computational Chemistry,121,2008AG12102
+100,3,Spectroscopy,121,2008AG12103
+101,4,Chemical Kinetics and Dynamics,121,2008AG12104
+102,5,Surface and Interface Chemistry,121,2008AG12105
+103,6,Electrochemistry,121,2008AG12106
+104,7,Photochemistry and Photophysics,121,2008AG12107
+105,8,Solid State Physical Chemistry,121,2008AG12108
+106,9,Biophysical Chemistry,121,2008AG12109
+107,99,"Chemistry- Physical, Others",121,2008AG12199
+108,1,Nonmetal Chemistry,122,2008AG12201
+109,2,Transition Metal Chemistry,122,2008AG12202
+110,3,Organometallic Chemistry,122,2008AG12203
+111,4,Bioinorganic Chemistry,122,2008AG12204
+112,5,Solid State Inorganic Chemistry,122,2008AG12205
+113,6,Inorganic Photochemistry,122,2008AG12206
+114,7,Kinetics and Reaction Mechanism,122,2008AG12207
+115,8,Catalyst,122,2008AG12208
+116,99,"Chemistry- Inorganic, Others",122,2008AG12299
+117,1,Natural Products,123,2008AG12301
+118,2,Organic Syntheses,123,2008AG12302
+119,3,Synthetic Methodology,123,2008AG12303
+120,4,Physical Organic Chemistry,123,2008AG12304
+121,5,Organic Photochemistry,123,2008AG12305
+122,6,Organometallic Chemistry,123,2008AG12306
+123,7,Bioorganic Chemistry,123,2008AG12307
+124,8,Medicinal Chemistry,123,2008AG12308
+125,99,"Chemistry-Organic, Others",123,2008AG12399
+126,1,Wet Analysis,124,2008AG12401
+127,2,Electrochemical Analysis,124,2008AG12402
+128,3,Separation Analysis,124,2008AG12403
+129,4,Spectroscopic Analysis,124,2008AG12404
+130,5,Surface Analysis,124,2008AG12405
+131,99,"Chemistry-Analytical, Others",124,2008AG12499
+132,1,Mineralogy,131,2008AG13101
+133,2,Petrology,131,2008AG13102
+134,3,Economic Geology,131,2008AG13103
+135,4,Structural Geology,131,2008AG13104
+136,5,Volcanology,131,2008AG13105
+137,6,Stratigraphy,131,2008AG13106
+138,7,Sedimentology,131,2008AG13107
+139,8,Paleontology,131,2008AG13108
+140,9,Environmental Geology,131,2008AG13109
+141,10,Planetary Geology,131,2008AG13110
+142,11,Applied Geology,131,2008AG13111
+143,12,Ground Water,131,2008AG13112
+144,99,"Geological Science, Others",131,2008AG13199
+145,1,Environmental Geochemistry,132,2008AG13201
+146,2,Trace Element Geochemistry,132,2008AG13202
+147,3,Organic Geochemistry,132,2008AG13203
+148,4,Geochronology,132,2008AG13204
+149,5,Isotope Geochemistry,132,2008AG13205
+150,6,Aqueous Geochemistry,132,2008AG13206
+151,99,"Earth Science-Chemical, Others",132,2008AG13299
+152,1,Structure and Dynamics of The Earth Interior,133,2008AG13301
+153,2,Seismology,133,2008AG13302
+154,3,Geomagnetism,133,2008AG13303
+155,4,Applied Geophysics,133,2008AG13304
+156,5,Gravity and Geodesy,133,2008AG13305
+157,6,Mineral Physics,133,2008AG13306
+158,7,Environmental Geophysics,133,2008AG13307
+159,99,"Earth Science-Physical, Others",133,2008AG13399
+160,1,Physical Meteorology,134,2008AG13401
+161,2,Chemical Meteorology,134,2008AG13402
+162,3,Environmental Meteorology,134,2008AG13403
+163,4,Computational Meteorology,134,2008AG13404
+164,5,Climatology,134,2008AG13405
+165,6,Applied Meteorology,134,2008AG13406
+166,99,"Meteorology, Others",134,2008AG13499
+167,1,Physical Oceanography,135,2008AG13501
+168,2,Biological Oceanography,135,2008AG13502
+169,3,Chemical Oceanography,135,2008AG13503
+170,4,Geological Oceanography,135,2008AG13504
+171,5,Environmental Oceanography,135,2008AG13505
+172,99,"Oceanography, Others",135,2008AG13599
+173,1,Cartography and Geomatics,136,2008AG13601
+174,2,Geographic Information,136,2008AG13602
+175,3,Geomorphology,136,2008AG13603
+176,4,Climate Geography,136,2008AG13604
+177,5,Soil Geography,136,2008AG13605
+178,6,Hydrogeography,136,2008AG13606
+179,7,Biogeography,136,2008AG13607
+180,8,Environmental Geography,136,2008AG13608
+181,99,"Geography, Others",136,2008AG13699
+182,1,Palaeoecology,201,2008AG20101
+183,2,Biological Ecology,201,2008AG20102
+184,3,Limnology,201,2008AG20103
+185,4,Sociobiology and Behavioural Ecology,201,2008AG20104
+186,5,Evolution,201,2008AG20105
+187,6,Molecular Evolution,201,2008AG20106
+188,7,Taxonomy,201,2008AG20107
+189,8,Wildlife Management,201,2008AG20108
+190,99,"Ecology, Others",201,2008AG20199
+191,1,Bacterium,202,2008AG20201
+192,2,Yeast and Fungus,202,2008AG20202
+193,3,Virus,202,2008AG20203
+194,4,Parasite,202,2008AG20204
+195,5,Algae,202,2008AG20205
+196,99,"Microbiology, Others",202,2008AG20299
+197,1,Plant Morphology,203,2008AG20301
+198,2,Plant Physiology,203,2008AG20302
+199,3,"Plant Reproduction, Breeding and Production",203,2008AG20303
+200,4,Plant Tissue Culture,203,2008AG20304
+201,5,Plant Pathology,203,2008AG20305
+202,99,"Botany, Others",203,2008AG20399
+203,1,"Morphology, Kinesiology and Ethology",204,2008AG20401
+204,2,Physiology and Metabolism,204,2008AG20402
+205,3,Animal Breeding and Reproduction,204,2008AG20403
+206,4,Animal Nutrition,204,2008AG20404
+207,5,Entomology,204,2008AG20405
+208,6,Experimental Animals,204,2008AG20406
+209,99,"Zoology, Others",204,2008AG20499
+210,1,Infection and Immunity,205,2008AG20501
+211,2,Reproduction and Development,205,2008AG20502
+212,3,Degenerative Diseases,205,2008AG20503
+213,4,Endocrinology,205,2008AG20504
+214,5,Sensory and Motion,205,2008AG20505
+215,6,Psychiatry,205,2008AG20506
+216,7,"Teeth, Periodontium and Oral Mucosa",205,2008AG20507
+217,8,Herbal Medicine,205,2008AG20508
+218,99,"Medical Science, Others",205,2008AG20599
+219,1,Pulse,206,2008AG20601
+220,2,Surgical Treatment,206,2008AG20602
+221,3,Acupuncture,206,2008AG20603
+222,4,Life Cycle and Nursing,206,2008AG20604
+223,5,Nursing Theory and Process,206,2008AG20605
+224,6,Outcome Study and Nursing Evaluation,206,2008AG20606
+225,99,"Medical Pathology, Others",206,2008AG20699
+226,1,Embryology,207,2008AG20701
+227,2,Cell Structure and Tissues,207,2008AG20702
+228,3,Physical Anthropology,207,2008AG20703
+229,4,Biomembranes,207,2008AG20704
+230,5,Organelles,207,2008AG20705
+231,6,"Transport, Cell Communication and Signal Transduction",207,2008AG20706
+232,7,Cell Division and Differentiation,207,2008AG20707
+233,8,Apoptosis,207,2008AG20708
+234,9,Cell Movement,207,2008AG20709
+235,99,"Cell Biology, Others",207,2008AG20799
+236,1,Carcinogenesis and Oncogenesis,208,2008AG20801
+237,2,Anticarcinogenesis and Therapeutics,208,2008AG20802
+238,3,Mechanism of Aging,208,2008AG20803
+239,4,Anti-aging,208,2008AG20804
+240,99,"Cancer, Others",208,2008AG20899
+241,1,Structure and Function of Macromolecules,209,2008AG20901
+242,2,Anabolism,209,2008AG20902
+243,3,Catabolism,209,2008AG20903
+244,4,Enzymes,209,2008AG20904
+245,5,Action Mechanism of Bioactive Substances,209,2008AG20905
+246,6,Genomics,209,2008AG20906
+247,7,"Replication, Transcription and Translation",209,2008AG20907
+248,8,Gene Expression and Regulation,209,2008AG20908
+249,9,Recombinant DNA,209,2008AG20909
+250,10,Structural Biology,209,2008AG20910
+251,99,"Biochemistry, Others",209,2008AG20999
+252,1,Molecular Genetics,210,2008AG21001
+253,2,Developmental Genetics,210,2008AG21002
+254,3,Cytogenetics,210,2008AG21003
+255,4,Population Genetics,210,2008AG21004
+256,99,"Genetics, Others",210,2008AG21099
+257,1,Biocatalysis and Bioconversion,211,2008AG21101
+258,2,Industrial Microorganisms and Fermentation Technology,211,2008AG21102
+259,3,Separation and Purification,211,2008AG21103
+260,4,Cell and Tissue Culture and Engineering,211,2008AG21104
+261,99,"Bioengineering, Others",211,2008AG21199
+262,1,Immunochemistry,212,2008AG21201
+263,2,Cellular Immunology,212,2008AG21202
+264,3,Molecular Immunology,212,2008AG21203
+265,4,Immunogenetics,212,2008AG21204
+266,5,Transplantation Immunology,212,2008AG21205
+267,6,Tumor Immunology,212,2008AG21206
+268,99,"Immunology, Others",212,2008AG21299
+269,1,Brain Science,213,2008AG21301
+270,2,Neurophysiology,213,2008AG21302
+271,3,Neuroembryology,213,2008AG21303
+272,4,Cellular and Molecular Neurobiology,213,2008AG21304
+273,5,Neuropathology,213,2008AG21305
+274,99,"Neuro Science, Others",213,2008AG21399
+275,1,General Physiology,214,2008AG21401
+276,2,Electrophysiology,214,2008AG21402
+277,3,Pharmacodynamics,214,2008AG21403
+278,4,Phamacokinetics,214,2008AG21404
+279,5,Toxicology,214,2008AG21405
+280,6,Phamacogenetics,214,2008AG21406
+281,7,Clinical Pharmacology,214,2008AG21407
+282,99,"Physiology &Pharmacology, Others",214,2008AG21499
+283,1,Drug Design,215,2008AG21501
+284,2,Bioorganic Synthesis,215,2008AG21502
+285,3,Medicinal Chemistry,215,2008AG21503
+286,4,Combinatorial Chemistry,215,2008AG21504
+287,99,"Pharmaceutical Chemistry, Others",215,2008AG21599
+288,1,Pharmacognosy,216,2008AG21601
+289,2,Medicinal Plants and Herbs,216,2008AG21602
+290,3,Compounding for Traditional Medicine,216,2008AG21603
+291,4,Natural Product Chemistry,216,2008AG21604
+292,5,Bioscreening,216,2008AG21605
+293,99,"Pharmacognosy, Others",216,2008AG21699
+294,1,Formulation and Drug Delivery Systems,217,2008AG21701
+295,2,Compounding,217,2008AG21702
+296,3,Biopharmaceutics,217,2008AG21703
+297,99,"Pharmacy, Others",217,2008AG21799
+298,1,Industrial Toxicology,218,2008AG21801
+299,2,Food Hygiene,218,2008AG21802
+300,3,Drug Epidemiology,218,2008AG21803
+301,4,Environmental Analysis,218,2008AG21804
+302,5,Environmental Hygiene,218,2008AG21805
+303,6,Environmental Diseases,218,2008AG21806
+304,99,"Pharmacy-Hygiene, Others",218,2008AG21899
+305,1,Environmental and Industrial Health,219,2008AG21901
+306,2,Industrial Safety,219,2008AG21902
+307,3,Disaster Control,219,2008AG21903
+308,4,Epidemiology,219,2008AG21904
+309,5,Preventive Dentistry,219,2008AG21905
+310,6,Health Information System,219,2008AG21906
+311,99,"Epidemiology, Others",219,2008AG21999
+312,1,Food Chemistry,220,2008AG22001
+313,2,Food Engineering,220,2008AG22002
+314,3,Nutrition Science,220,2008AG22003
+315,4,Disease and Nutrition,220,2008AG22004
+316,5,Functional Foods,220,2008AG22005
+317,99,"Food & Nutrition, Others",220,2008AG22099
+318,1,Crop Science,221,2008AG22101
+319,2,Insect and Pest Management,221,2008AG22102
+320,3,Pesticides,221,2008AG22103
+321,4,Soil Science,221,2008AG22104
+322,5,Fertilizers,221,2008AG22105
+323,6,Horticultural and Landscape Plants,221,2008AG22106
+324,7,Silviculture and Forest Tree Breeding,221,2008AG22107
+325,99,"Agriculture, Others",221,2008AG22199
+326,1,Ruminant Feeding and Nutrition,222,2008AG22201
+327,2,Non-ruminant Feeding and Nutrition,222,2008AG22202
+328,3,Poultry Feeding and Nutrition,222,2008AG22203
+329,4,Animal Production and Management,222,2008AG22204
+330,5,Veterinary Pathology,222,2008AG22205
+331,6,Veterinary Pharmacology,222,2008AG22206
+332,7,Veterinary Physiology,222,2008AG22207
+333,8,Veterinary Microorganisms and Parasites,222,2008AG22208
+334,9,Veterinary Infectious Diseases,222,2008AG22209
+335,99,"Veterinary Medicine, Others",222,2008AG22299
+336,1,Fish Genetics and Breeding Science,223,2008AG22301
+337,2,Marine Aquaculture,223,2008AG22302
+338,3,Fishing Gears and Technology,223,2008AG22303
+339,99,"Fishery, Others",223,2008AG22399
+340,1,"Material Structure, Properties and Testing",301,2008AG30101
+341,2,"Melting, Casting, Solidification and Heat Treatment",301,2008AG30102
+342,3,"Forming, Deformation, Joining",301,2008AG30103
+343,4,Powder Synthesis,301,2008AG30104
+344,5,Crystal Growth,301,2008AG30105
+345,6,Surface Treatment and Thin Film Deposition,301,2008AG30106
+346,7,Metals,301,2008AG30107
+347,8,Ceramics,301,2008AG30108
+348,9,Polymers,301,2008AG30109
+349,10,Semiconductors,301,2008AG30110
+350,11,Composites,301,2008AG30111
+351,99,"Materials Engineering, Others",301,2008AG30199
+352,1,Power Systems,302,2008AG30201
+353,2,Electric Discharge and High Voltage,302,2008AG30202
+354,3,Power Generation and Storage,302,2008AG30203
+355,4,Electromagnetics and Wireless Communication,302,2008AG30204
+356,5,Circuit Theory,302,2008AG30205
+357,6,Integrated Circuits and CAD Design,302,2008AG30206
+358,7,Photon Devices,302,2008AG30207
+359,8,Electron Devices,302,2008AG30208
+360,9,Bioelectronic Devices,302,2008AG30209
+361,10,Communication Theory,302,2008AG30210
+362,11,Communications Systems,302,2008AG30211
+363,12,Control Systems,302,2008AG30212
+364,13,Signal Processing,302,2008AG30213
+365,14,Mobile and Satellite Communication,302,2008AG30214
+366,99,"Electrical Engineering, Others",302,2008AG30299
+367,1,Computer Hardware,303,2008AG30301
+368,2,Computer Systems Software,303,2008AG30302
+369,3,Applied Software,303,2008AG30303
+370,4,Software Engineering,303,2008AG30304
+371,5,Graphics,303,2008AG30305
+372,6,Image Processing,303,2008AG30306
+373,7,Algorithms,303,2008AG30307
+374,8,Artificial Intelligence,303,2008AG30308
+375,9,Virtual Reality and Related Simulations,303,2008AG30309
+376,10,Modelling and Simulation Studies,303,2008AG30310
+377,11,Computer Networks and Internet,303,2008AG30311
+378,99,"Computer Science, Others",303,2008AG30399
+379,1,"Fatigue, Fracture and Strength Assessment",304,2008AG30401
+380,2,Pressure Vessels and Pipelines,304,2008AG30402
+381,3,Solid and Structural Mechanics,304,2008AG30403
+382,4,Dynamics and Vibration,304,2008AG30404
+383,5,Acoustics and Noise,304,2008AG30405
+384,6,Manufacturing and Precision Engineering,304,2008AG30406
+385,7,Mechanical Design and Computer－Aided Design,304,2008AG30407
+386,8,Thermal Engineering and Heat Transfer,304,2008AG30408
+387,9,"Engine, Environment and Pollution Control",304,2008AG30409
+388,10,Refrigeration and Air Conditioning,304,2008AG30410
+389,11,Fluids Engineering,304,2008AG30411
+390,12,Turbulence,304,2008AG30412
+391,13,Computational Mechanics and Numerical Analysis,304,2008AG30413
+392,14,"Mechanical Systems, Measurement and Control",304,2008AG30414
+393,15,Mechatronics and Automation System,304,2008AG30415
+394,16,Micro-electromechanical System,304,2008AG30416
+395,99,"Mechanical Engineering, Others",304,2008AG30499
+396,1,Aerodynamics,305,2008AG30501
+397,2,Guidance and Control,305,2008AG30502
+398,3,Aerospace Propulsion and Power,305,2008AG30503
+399,4,Aerospace Structure and Design,305,2008AG30504
+400,5,Marine Hydrodynamics,305,2008AG30505
+401,6,Marine Structural Mechanics,305,2008AG30506
+402,7,Marine Design and Production,305,2008AG30507
+403,8,Marine Equipment Engineering,305,2008AG30508
+404,99,"Aerospace and Ocean Engineering, Others",305,2008AG30599
+405,1,Nuclear Reactor Physics and Design,306,2008AG30601
+406,2,Nuclear Reactor Operation and Control,306,2008AG30602
+407,3,Nuclear Reactor Thermal-Hydraulics,306,2008AG30603
+408,4,Nuclear Reactor Safety and Plant Management,306,2008AG30604
+409,5,Nuclear Reactor Materials and Fuel,306,2008AG30605
+410,6,"Radiation Protection and Applications, Radioactive Waste",306,2008AG30606
+411,7,Nuclear Fusion and Basic Nuclear Technology,306,2008AG30607
+412,99,"Nuclear Engineering, Others",306,2008AG30699
+413,1,Reaction Engineering and Reactor Design,307,2008AG30701
+414,2,Thermodynamics and Heat Transfer,307,2008AG30702
+415,3,Transport Phenomena,307,2008AG30703
+416,4,Separation Processes,307,2008AG30704
+417,5,Combustion and Energy Conversion,307,2008AG30705
+418,6,Organic Chemical Processes,307,2008AG30706
+419,7,Inorganic Chemical Processes,307,2008AG30707
+420,8,Biochemical Processes,307,2008AG30708
+421,9,Surface/Interface/Catalytic Chemical Processes,307,2008AG30709
+422,10,Chemical Processes for Electronic Materials,307,2008AG30710
+423,11,Electrochemical Processes,307,2008AG30711
+424,12,Clean Chemical Processes,307,2008AG30712
+425,99,"Chemical Engineering, Others",307,2008AG30799
+426,1,Polymerization Reaction and Polymer Synthesis,308,2008AG30801
+427,2,Polymer Characterization,308,2008AG30802
+428,3,Polymer Properties,308,2008AG30803
+429,4,Polymer Materials,308,2008AG30804
+430,5,Rheology and Polymer Processing,308,2008AG30805
+431,6,Biopolymers,308,2008AG30806
+432,99,"Polymer Science, Others",308,2008AG30899
+433,1,Water Supply and Water Quality Management,309,2008AG30901
+434,2,Sewerage and Waste Water Treatment,309,2008AG30902
+435,3,Air Pollution Control and Management,309,2008AG30903
+436,4,Noise,309,2008AG30904
+437,5,Soil Pollution,309,2008AG30905
+438,6,Solid Waste Management,309,2008AG30906
+439,7,Environmental Remediation,309,2008AG30907
+440,8,Recycling,309,2008AG30908
+441,99,"Environmental Engineering, Others",309,2008AG30999
+442,1,Architectural Planning and Designing,310,2008AG31001
+443,2,Urban Planning and Designing,310,2008AG31002
+444,3,Architectural History,310,2008AG31003
+445,4,Structural Engineering,310,2008AG31004
+446,5,Building Materials,310,2008AG31005
+447,6,Building Structures,310,2008AG31006
+448,7,Construction Engineering and Management,310,2008AG31007
+449,8,Building Environmental Engineering,310,2008AG31008
+450,99,"Architectural Engineering, Others",310,2008AG31099
+451,1,Structual Engineering,311,2008AG31101
+452,2,Geotechnical Engineering,311,2008AG31102
+453,3,Hydraulic Engineering,311,2008AG31103
+454,4,Survey and Geodesy Engineering,311,2008AG31104
+455,5,Traffic and Road Engineering,311,2008AG31105
+456,6,Coastal and Ocean Engineering,311,2008AG31106
+457,7,Construction Management,311,2008AG31107
+458,99,"Civil Engineering, Others",311,2008AG31199
+459,1,Exploration,312,2008AG31201
+460,2,Mining Engineering,312,2008AG31202
+461,3,Mineral Processing,312,2008AG31203
+462,4,Rock Mechanics,312,2008AG31204
+463,99,"Mining Engineering, Others",312,2008AG31299
+464,1,Transportation Planning and Systems,313,2008AG31301
+465,2,Transportation Control and Operations,313,2008AG31302
+466,3,Transportation Facility,313,2008AG31303
+467,4,Transportation Economics and Logistics,313,2008AG31304
+468,5,Traffic Equipments and Devices,313,2008AG31305
+469,6,Public Transportation,313,2008AG31306
+470,99,"Transportation Engineering, Others",313,2008AG31399
+471,1,Biomedical Technology,314,2008AG31401
+472,2,Biomedical Materials,314,2008AG31402
+473,3,Biomechanics,314,2008AG31403
+474,99,"Biomedical Engineering, Others",314,2008AG31499
+475,1,Production Management,315,2008AG31501
+476,2,Operation Research,315,2008AG31502
+477,3,Manufacturing Systems Engineering,315,2008AG31503
+478,4,Human-Machine System Design,315,2008AG31504
+479,5,Quality and Reliability Engineering,315,2008AG31505
+480,99,"Industrial Engineering, Others",315,2008AG31599
+481,1,Agricultural Civil Engineering,316,2008AG31601
+482,2,Agricultural Power and Machinery,316,2008AG31602
+483,3,Agricultural and Fishery Manufacturing Machinery,316,2008AG31603
+484,99,"Agricultural Engineering, Others",316,2008AG31699
+485,1,Forest Management,317,2008AG31701
+486,2,Forest Operations,317,2008AG31702
+487,3,Wood Science and Engineering,317,2008AG31703
+488,99,"Forest Engineering, Others",317,2008AG31799
+489,1,Textile Engineering,318,2008AG31801
+490,2,Textile Materials,318,2008AG31802
+491,3,Clothing Physiology,318,2008AG31803
+492,4,Clothing Design and Construction,318,2008AG31804
+493,5,Apparel Quality Control and Evaluation,318,2008AG31805
+494,6,Apparel Management,318,2008AG31806
+495,7,Sewing Science,318,2008AG31807
+496,99,"Textile Engineering, Others",318,2008AG31899
+497,1,Mathematics Education,501,2008AG50101
+498,2,Science Education,501,2008AG50102
+499,3,Engineering Education,501,2008AG50103
+500,4,Information Science Education,501,2008AG50104
+501,99,"Science Education, Others",501,2008AG50199
+502,1,History of Science,502,2008AG50201
+503,2,History of Technology,502,2008AG50202
+504,3,Philosophy of Science and Technology,502,2008AG50203
+505,4,Ethics of Science and Life,502,2008AG50204
+506,5,Sociology of Science,502,2008AG50205
+507,99,"Science History, Others",502,2008AG50299
+508,1,Innovation Theory,503,2008AG50301
+509,2,Classification and Standardization,503,2008AG50302
+510,3,Technology Forecasting and Assessment,503,2008AG50303
+511,4,Economics of Technological Change,503,2008AG50304
+512,5,Technology Evaluation,503,2008AG50305
+513,6,Technology Planning and Strategy,503,2008AG50306
+514,7,"R&D, Technology Management",503,2008AG50307
+515,8,Science and Technology Law and Policies,503,2008AG50308
+516,9,Intellectual Property Right,503,2008AG50309
+517,99,"Science Policy, Others",503,2008AG50399
+518,1,Semiotics,511,2008AG51101
+519,2,Information Theory,511,2008AG51102
+520,3,Information and Knowledge Production,511,2008AG51103
+521,4,Classification and Catalog,511,2008AG51104
+522,5,Indexing and Abstracting,511,2008AG51105
+523,6,Management of Information Center,511,2008AG51106
+524,7,Information Service,511,2008AG51107
+525,8,Bibliography,511,2008AG51108
+526,9,History,511,2008AG51109
+527,10,Record Management and Archives,511,2008AG51110
+528,99,"Informatics, Others",511,2008AG51199
+529,1,Information Processing,512,2008AG51201
+530,2,Communication,512,2008AG51202
+531,3,Information Distribution,512,2008AG51203
+532,4,Information Management,512,2008AG51204
+533,5,Database,512,2008AG51205
+534,6,Digital Library,512,2008AG51206
+535,7,Information Retrieval,512,2008AG51207
+536,8,Information Security,512,2008AG51208
+537,99,"Information Technology, Others",512,2008AG51299
+538,1,Theory of Information System,513,2008AG51301
+539,2,System Development,513,2008AG51302
+540,3,System Evaluation,513,2008AG51303
+541,4,System Integration,513,2008AG51304
+542,5,Transaction System,513,2008AG51305
+543,6,Management System,513,2008AG51306
+544,7,Decision Support System,513,2008AG51307
+545,8,Expert System,513,2008AG51308
+546,9,Knowledge Management System,513,2008AG51309
+547,10,Financial Information System,513,2008AG51310
+548,11,Trade Information System,513,2008AG51311
+549,12,Medical Information System,513,2008AG51312
+550,13,Geographical Information System,513,2008AG51313
+551,14,Transportation Information System,513,2008AG51314
+552,15,Public Administration Information System,513,2008AG51315
+553,16,Library Information System,513,2008AG51316
+554,99,"Information System, Others",513,2008AG51399
+555,1,Animation,514,2008AG51401
+556,2,Miniature,514,2008AG51402
+557,3,Illustration,514,2008AG51403
+558,4,Graphics Design,514,2008AG51404
+559,5,Multimedia Image,514,2008AG51405
+560,6,Contents Development,514,2008AG51406
+561,7,Computer Game,514,2008AG51407
+562,99,"Multimedia, Others",514,2008AG51499
+563,1,CALS/EC General,515,2008AG51501
+564,2,Electronic Data Interchange,515,2008AG51502
+565,3,Logistics,515,2008AG51503
+566,4,Electronic Money,515,2008AG51504
+567,5,Electronic Authentication,515,2008AG51505
+568,6,EC Law and Institution,515,2008AG51506
+569,7,EC Policy,515,2008AG51507
+570,8,Electronic Agent Technology,515,2008AG51508
+571,99,"Electronic Commerce, Others",515,2008AG51599
+572,1,Foundations and History of Psychology,521,2008AG52101
+573,2,Experimental and Cognitive Psychology,521,2008AG52102
+574,3,Biological and Physiological Psychology,521,2008AG52103
+575,4,Developmental Psychology,521,2008AG52104
+576,5,Social and Personality Psychology,521,2008AG52105
+577,6,Industrial and Organizational Psychology,521,2008AG52106
+578,7,Clinical and Neuropsychology,521,2008AG52107
+579,8,Counseling Psychology,521,2008AG52108
+580,9,Psychometrics and Quantitative Psychology,521,2008AG52109
+581,10,Applied Psychology,521,2008AG52110
+582,99,"Psychological Science, Others",521,2008AG52199
+583,1,Conceptual Foundations of Cognitive Sciences,522,2008AG52201
+584,2,Sensation and Sensorimotor Coordination,522,2008AG52202
+585,3,"Attention, Learning and Memory Processes",522,2008AG52203
+586,4,Knowledge Representation and Inference,522,2008AG52204
+587,5,Language Processing,522,2008AG52205
+588,6,Cognitive Development and Pathology,522,2008AG52206
+589,7,Social Cognition and Cognitive Ecology,522,2008AG52207
+590,8,Cognitive Neuroscience,522,2008AG52208
+591,9,Cognitive Engineering,522,2008AG52209
+592,99,"Cognitive Science, Others",522,2008AG52299
+593,99,Others,999,2008AG99999

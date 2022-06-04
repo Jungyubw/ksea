@@ -1,0 +1,71 @@
+<button type="button" (click)="reload()">Reload!</button>
+
+
+    <h5>Chapter Member Chart</h5>
+    <p-chart type="bar" [data]="basicData" [options]="stackedOptions"></p-chart>
+
+
+
+    <h5>Chapter Info Tables</h5>
+<p-table [value]="chapters">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Code
+                    <p-columnFilter type="text" field="chapterCode" display="chapterCode"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Type
+                    <p-columnFilter type="text" field="chapterType" display="chapterType"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Name
+                    <p-columnFilter type="text" field="chapterName" display="chapterName"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Location
+                    <p-columnFilter type="text" field="chapterLoc" display="chapterLoc"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Url
+                    <p-columnFilter type="text" field="chapterUrl" display="chapterUrl"></p-columnFilter>
+                </div>
+            </th>
+            <th>
+                <div class="flex justify-content-center align-items-center">
+                    Domain
+                    <p-columnFilter type="text" field="subDomain" display="subDomain"></p-columnFilter>
+                </div>
+            </th>
+            <th>President</th>
+            <th>MDId</th>
+            <th>DateApproved</th>
+            <th>KseaId</th>
+            <th>ProCode</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-cha>
+        <tr>
+            <td>{{cha.chapterCode}}</td>
+            <td>{{cha.chapterType}}</td>
+            <td>{{cha.chapterName}}</td>
+            <td>{{cha.chapterLoc}}</td>
+            <td>{{cha.chapterUrl}}</td>
+            <td>{{cha.subDomain}}</td>
+            <td>{{cha.presidentId}}</td>
+            <td>{{cha.MDId}}</td>
+            <td>{{cha.dateApproved}}</td>
+            <td>{{cha.kseaId}}</td>
+            <td>{{cha.pro_code}}</td>
+        </tr>
+    </ng-template>
+</p-table>

@@ -1,0 +1,52 @@
+<button type="button" (click)="reload()">Reload!</button>
+
+
+<h5>APS Member Chart</h5>
+    <p-chart type="bar" [data]="basicData" [options]="stackedOptions"></p-chart>
+
+
+    <h5>APS Info Tables</h5>
+    <p-table [value]="apsdefs">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        ID
+                        <p-columnFilter type="text" field="apsID" display="apsID"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Name
+                        <p-columnFilter type="text" field="apsName" display="apsName"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Full Name
+                        <p-columnFilter type="text" field="apsFullName" display="apsFullName"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        URL
+                        <p-columnFilter type="text" field="apsURL" display="apsURL"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        president
+                        <p-columnFilter type="text" field="presidentID" display="presidentID"></p-columnFilter>
+                    </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-item>
+            <tr>
+                <td>{{item.apsID}}</td>
+                <td>{{item.apsName}}</td>
+                <td>{{item.apsFullName}}</td>
+                <td>{{item.apsURL}}</td>
+                <td>{{item.presidentID}}</td>
+            </tr>
+        </ng-template>

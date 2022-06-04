@@ -1,0 +1,430 @@
+<div class="wrap">
+    <h2>My page</h2>
+<div class="wrap-mypage">
+    <div class="wrap-lnb">
+        <ul class="lnb">
+            <li class="selected"> Personal information</li>
+            <li> KSEA information</li>
+            <li>Education information</li>
+            <li>Work information</li>
+            <li>Payment information</li>
+            
+        </ul>
+    </div>
+    <div class="con-wrap">
+        <!-- PERSONAL INFORMATION -->
+        <div *ngIf="false">
+            <div class="input-name" >
+                <label for="Name">Name</label>
+                <select id="Name" required>
+                    <option value="" selected>Title</option>
+                    <option value="">Ms.</option>
+                    <option value="">Mrs.</option>
+                    <option value="">Mr.</option>
+                    <option value="">Prof.</option>
+                    <option value="">Dr.</option>
+                </select>
+                <input type="text"  placeholder="First Name" required>
+                <input type="text" placeholder="Middle Name">
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="input-name" >
+                <label for="kName">Korean name</label>
+                <input type="text" id="kName"  placeholder="Korean first name">
+                <input type="text" placeholder="Korean last Name">
+            </div>
+            <div class="input-gender">
+                <input type="radio" id="male"> <label for="male">Male</label>
+                <input type="radio" id="feMale"> <label for="female">Female</label>
+            </div>
+            <div>
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" placeholder="mm/dd/yyyy">
+            </div>
+            
+            <div class="input-address">
+                <label for="Address">Primary Contact</label>
+                <input type="text" id="Address" placeholder="Street">
+                <input type="text" placeholder="City" id="">
+                <input type="text" placeholder="Satate">
+                <input type="number" placeholder="Zipcode">
+            </div>
+            <div class="input-gender">
+                <input type="radio" id="home"> <label for="home">Home</label>
+                <input type="radio" id="work"> <label for="work">Work</label>
+            </div>
+            <div>
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div>
+                <label for="phone">Telephone</label>
+                <input type="tel" id="phone" placeholder="000-000-0000">
+            </div>
+            <div>
+                <label for="citizenship">Citizenship</label>
+                <input type="text" id="citizenship" >
+            </div>           
+        </div>
+        <!-- KSEA CATEGORY -->
+        <div *ngIf="true">
+            <div >
+                <label for="memberType">Member Type</label>
+                <select id="memberType" required>
+                    <option value="" selected>Select</option>
+                    <option value="">Regular</option>
+                    <option value="">Graduate</option>
+                    <option value="">Undergraduate</option>
+                </select>
+            </div>
+            <div class="input-address">
+                <label for="specialty">Specialty (*At least, one specialty is required.)</label>
+                <input type="search" id="specialty"  placeholder="1st" required>
+                <input type="search" placeholder="2nd">
+                <input type="search" placeholder="3th">
+            </div>
+            <div >
+                <label for="chapter">Chapter</label>
+                <select id="chapter" required>
+                    <option value="" selected>Select</option>
+                    <option value="23">Alabama</option>
+                    <option value="72">Arkansas</option>
+                    <option value="24">Austin TX</option>
+                    <option value="31">Baltimore</option>
+                    <option value="70">Berkeley</option>
+                    <option value="42">Central IL</option>
+                    <option value="53">Central Iowa</option>
+                    <option value="75">Central Oregon</option>
+                    <option value="1">Central Pennsylvania</option>
+                    <option value="41">Central VA</option>
+                    <option value="7">Chicagoland</option>
+                    <option value="26">Colorado</option>
+                    <option value="2">Connecticut</option>
+                    <option value="64">Dayton-OH</option>
+                    <option value="76">Eastern Carolina</option>
+                    <option value="71">Gainesville FL</option>
+                    <option value="3">Georgia</option>
+                    <option value="51">Great Lakes reg.</option>
+                    <option value="0">Headquarter</option>
+                    <option value="69">Idaho</option>
+                    <option value="4">Indiana</option>
+                    <option value="52">Iowa city</option>
+                    <option value="36">Kansas MO</option>
+                    <option value="903">Kentucky</option>
+                    <option value="900">KFDA</option>
+                    <option value="901">KJIST</option>
+                    <option value="907">KSEA Canada</option>
+                    <option value="906">KSEA International</option>
+                    <option value="905">KSEA Korea </option>
+                    <option value="25">Las Vegas</option>
+                    <option value="46">Lehigh Valley</option>
+                    <option value="55">Louisiana</option>
+                    <option value="6">Michigan</option>
+                    <option value="54">Mid MO</option>
+                    <option value="8">Minnesota</option>
+                    <option value="61">Mississippi MS</option>
+                    <option value="59">N.Florida</option>
+                    <option value="74">Nashville</option>
+                    <option value="38">NE New York</option>
+                    <option value="33">NE-Ohio</option>
+                    <option value="43">Nebraska</option>
+                    <option value="63">Nevada</option>
+                    <option value="9">New England</option>
+                    <option value="10">New Jersey</option>
+                    <option value="45">New Mexico</option>
+                    <option value="11">New York Metropolitan</option>
+                    <option value="12">North Carolina</option>
+                    <option value="65">North Dakota</option>
+                    <option value="40">North TX</option>
+                    <option value="13">Northern CA</option>
+                    <option value="57">Northwest</option>
+                    <option value="14">Ohio</option>
+                    <option value="37">Oklahoma</option>
+                    <option value="62">Oregon</option>
+                    <option value="67">Orlando Central Florida</option>
+                    <option value="66">Peoria-IL</option>
+                    <option value="16">Philadelphia</option>
+                    <option value="35">Rolla MO</option>
+                    <option value="47">S. Carolina</option>
+                    <option value="58">Sacramento</option>
+                    <option value="60">San Diego</option>
+                    <option value="39">SE VA</option>
+                    <option value="15">Seattle</option>
+                    <option value="30">Silicon Valley</option>
+                    <option value="19">South Texas</option>
+                    <option value="18">Southern CA</option>
+                    <option value="49">Southern VA</option>
+                    <option value="73">Southwest Ohio</option>
+                    <option value="17">St. Louis</option>
+                    <option value="68">Tampa Bay</option>
+                    <option value="32">Tennessee</option>
+                    <option value="77">Texas Coastal Bend</option>
+                    <option value="20">Upstate NY</option>
+                    <option value="56">Utah</option>
+                    <option value="21">Washington Metro</option>
+                    <option value="22">West Penn</option>
+                    <option value="29">West VA</option>
+                    <option value="50">Western NY</option>
+                    <option value="44">Wisconsin</option>
+                    <option value="999">None or Unknown</option>
+                </select>
+            </div>
+            <div >
+                <label for="technicalGroup">Technical Group</label>
+                <select id="technicalGroup" required>
+                    <option value="" selected>Select</option>
+                    <option value="A-1">A-1: Physics                                                                                                                                                                                                 </option>
+                    <option value="A-2">A-2: Chemistry                                                                                                                                                                                               </option>
+                    <option value="A-3">A-3: Mathematics, Statistics, Geo/Atmospheric/Ocean Sciences                                                                                                                                                 </option>
+                    <option value="B-1">B-1: Health Sciences (Medical Science, Veterinary Medicine, Pharmaceutical Science, Public Health, Nursing, etc.)                                                                                            </option>
+                    <option value="B-2">B-2: Agricultural Sciences (Agriculture, Ecology, Food, Nutrition, etc.)                                                                                                                                     </option>
+                    <option value="B-3">B-3: Biological and Biomedical Sciences (Biology, Molecular Biology, Cognitive Science, Botany, Zoology, Biomechanics, etc.)                                                                                 </option>
+                    <option value="C-1">C-1: Bioengineering and Biomedical Engineering                                                                                                                                                               </option>
+                    <option value="C-2">C-2: Chemical, Textile, Energy, and Nuclear Engineering                                                                                                                                                      </option>
+                    <option value="C-3">C-3: Mechanical, Aerospace, and Naval Engineering                                                                                                                                                            </option>
+                    <option value="C-4">C-4: Materials Science and Engineering, Nanotechnology                                                                                                                                                       </option>
+                    <option value="C-5">C-5: Civil and Environmental Engineering, Architecture                                                                                                                                                       </option>
+                    <option value="C-6">C-6: Electrical and Computer Engineering                                                                                                                                                                     </option>
+                    <option value="C-7">C-7: Computer and Information Sciences                                                                                                                                                                       </option>
+                    <option value="C-8">C-8: Industrial, Manufacturing, and Systems Engineering, Management Sciences, Operations Research                                                                                                            </option>
+                    <option value="D-1">D-1: Social Sciences (Anthropology, Economics, Political Science, Sociology, Public Policy, etc.), Psychology, Digital Arts, STEM Education, and Other Sciences                                              </option>
+                    <option value="D-2">D-2: Technology Entrepreneurship, Financial Engineering, Business Management, Law involving Science and Engineering                                                                                          </option>
+                    <option value="U  ">U  : Unknown                                                                                                                                                                                                 </option>
+                </select>
+            </div>
+            <div class="input-address">
+                <label for="aps">Affiliated Professional Society (APS)</label>
+                <select id="aps" required>
+                    <option value="" selected>Select</option>
+                    <option value="0">NONE: NONE or UNKNOWN</option>
+                    <option value="1">AKPA: Association of Korean Physicists in America</option>
+                    <option value="2">KLAM: Korean Life Scientists Association of Maryland</option>
+                    <option value="3">KASBP: Korean American Society for Biotech &amp; Phamaceuticals</option>
+                    <option value="4">KOCSEA: Korean Computer Scientists &amp; Engineers Association in America</option>
+                    <option value="5">KOEA: Korean-American Oil &amp; Gas Engineers Association</option>
+                    <option value="6">KOTAA: Korean Transportation Association in America</option>
+                    <option value="7">KWISE: Korean-American Women in Science and Engineering</option>
+                    <option value="8">NIH-KSA: NIH-Korean Scientists Association</option>
+                    <option value="9">NYKB: New York Korean Biologists</option>
+                    <option value="10">KISS: Korean International Statistical Society</option>
+                    <option value="11">KOPANA: Korean Pathologists Association of North America</option>
+                    <option value="12">KEPS: Korean-American  Energy Exploration &amp; Production Society</option>
+                    <option value="13">KASBI: Korean-American Society for Biomedical Informatics</option>
+                    <option value="14">KAIPBA: Korean-American Intellectual Property Bar Association</option>
+                    <option value="15">KAMSA: Korean-American Mathematical Scientist Association</option>
+                    <option value="16">RTP B&amp;B: Research Triangle Park Bioscience and Biotechnology Meeting</option>
+                    <option value="17">KOLIS: Korean Life Scientists in the Bay Area </option>
+                    <option value="18">AKN: Association of Korean Neuroscientists </option>
+                    <option value="19">KAFTA: Korean-American Food Technologists Association</option>
+                    <option value="20">KSCEE: Korean-American Society of Civil and Environmental Engineers</option>
+                    <option value="21">KAMS: Korean-American Materials Society</option>
+                    <option value="22">KACEPMA: Korean American Construction, Engineering, and Project Management Association</option>
+                    <option value="23">SDKoBA: San Diego Korean Biomedical Association</option>
+                    <option value="24">KBMES: Korean-American Biomedical Engineering Society</option>
+                    <option value="25">KBM: Korean Biological Sciences Research Group at Michigan</option>
+                    <option value="26">TeK One: TeK One</option>
+                    <option value="27">KAGES: Korea-America Association for Geospatial and Environmental Sciences</option>
+                    <option value="28">KAMPiNA: Korean Association of Medical Physicists in North America</option>
+                    <option value="29">KBCAC: Korean Bioscientists &amp; Chemists  Association in Chicago </option>
+                    <option value="30">KITEE: Korean American Innovative Technology Engineers and Entrepreneurs  </option>
+                    <option value="31">KAPAL: Korean-American Professional Association in Life Sciences</option>
+                    <option value="32">IT: Information Technology</option>
+                </select>
+                <select >
+                    <option value="" selected>Select</option>
+                    <option value="0">NONE: NONE or UNKNOWN</option>
+                    <option value="1">AKPA: Association of Korean Physicists in America</option>
+                    <option value="2">KLAM: Korean Life Scientists Association of Maryland</option>
+                    <option value="3">KASBP: Korean American Society for Biotech &amp; Phamaceuticals</option>
+                    <option value="4">KOCSEA: Korean Computer Scientists &amp; Engineers Association in America</option>
+                    <option value="5">KOEA: Korean-American Oil &amp; Gas Engineers Association</option>
+                    <option value="6">KOTAA: Korean Transportation Association in America</option>
+                    <option value="7">KWISE: Korean-American Women in Science and Engineering</option>
+                    <option value="8">NIH-KSA: NIH-Korean Scientists Association</option>
+                    <option value="9">NYKB: New York Korean Biologists</option>
+                    <option value="10">KISS: Korean International Statistical Society</option>
+                    <option value="11">KOPANA: Korean Pathologists Association of North America</option>
+                    <option value="12">KEPS: Korean-American  Energy Exploration &amp; Production Society</option>
+                    <option value="13">KASBI: Korean-American Society for Biomedical Informatics</option>
+                    <option value="14">KAIPBA: Korean-American Intellectual Property Bar Association</option>
+                    <option value="15">KAMSA: Korean-American Mathematical Scientist Association</option>
+                    <option value="16">RTP B&amp;B: Research Triangle Park Bioscience and Biotechnology Meeting</option>
+                    <option value="17">KOLIS: Korean Life Scientists in the Bay Area </option>
+                    <option value="18">AKN: Association of Korean Neuroscientists </option>
+                    <option value="19">KAFTA: Korean-American Food Technologists Association</option>
+                    <option value="20">KSCEE: Korean-American Society of Civil and Environmental Engineers</option>
+                    <option value="21">KAMS: Korean-American Materials Society</option>
+                    <option value="22">KACEPMA: Korean American Construction, Engineering, and Project Management Association</option>
+                    <option value="23">SDKoBA: San Diego Korean Biomedical Association</option>
+                    <option value="24">KBMES: Korean-American Biomedical Engineering Society</option>
+                    <option value="25">KBM: Korean Biological Sciences Research Group at Michigan</option>
+                    <option value="26">TeK One: TeK One</option>
+                    <option value="27">KAGES: Korea-America Association for Geospatial and Environmental Sciences</option>
+                    <option value="28">KAMPiNA: Korean Association of Medical Physicists in North America</option>
+                    <option value="29">KBCAC: Korean Bioscientists &amp; Chemists  Association in Chicago </option>
+                    <option value="30">KITEE: Korean American Innovative Technology Engineers and Entrepreneurs  </option>
+                    <option value="31">KAPAL: Korean-American Professional Association in Life Sciences</option>
+                    <option value="32">IT: Information Technology</option>
+                </select>
+                <select >
+                    <option value="" selected>Select</option>
+                    <option value="0">NONE: NONE or UNKNOWN</option>
+                    <option value="1">AKPA: Association of Korean Physicists in America</option>
+                    <option value="2">KLAM: Korean Life Scientists Association of Maryland</option>
+                    <option value="3">KASBP: Korean American Society for Biotech &amp; Phamaceuticals</option>
+                    <option value="4">KOCSEA: Korean Computer Scientists &amp; Engineers Association in America</option>
+                    <option value="5">KOEA: Korean-American Oil &amp; Gas Engineers Association</option>
+                    <option value="6">KOTAA: Korean Transportation Association in America</option>
+                    <option value="7">KWISE: Korean-American Women in Science and Engineering</option>
+                    <option value="8">NIH-KSA: NIH-Korean Scientists Association</option>
+                    <option value="9">NYKB: New York Korean Biologists</option>
+                    <option value="10">KISS: Korean International Statistical Society</option>
+                    <option value="11">KOPANA: Korean Pathologists Association of North America</option>
+                    <option value="12">KEPS: Korean-American  Energy Exploration &amp; Production Society</option>
+                    <option value="13">KASBI: Korean-American Society for Biomedical Informatics</option>
+                    <option value="14">KAIPBA: Korean-American Intellectual Property Bar Association</option>
+                    <option value="15">KAMSA: Korean-American Mathematical Scientist Association</option>
+                    <option value="16">RTP B&amp;B: Research Triangle Park Bioscience and Biotechnology Meeting</option>
+                    <option value="17">KOLIS: Korean Life Scientists in the Bay Area </option>
+                    <option value="18">AKN: Association of Korean Neuroscientists </option>
+                    <option value="19">KAFTA: Korean-American Food Technologists Association</option>
+                    <option value="20">KSCEE: Korean-American Society of Civil and Environmental Engineers</option>
+                    <option value="21">KAMS: Korean-American Materials Society</option>
+                    <option value="22">KACEPMA: Korean American Construction, Engineering, and Project Management Association</option>
+                    <option value="23">SDKoBA: San Diego Korean Biomedical Association</option>
+                    <option value="24">KBMES: Korean-American Biomedical Engineering Society</option>
+                    <option value="25">KBM: Korean Biological Sciences Research Group at Michigan</option>
+                    <option value="26">TeK One: TeK One</option>
+                    <option value="27">KAGES: Korea-America Association for Geospatial and Environmental Sciences</option>
+                    <option value="28">KAMPiNA: Korean Association of Medical Physicists in North America</option>
+                    <option value="29">KBCAC: Korean Bioscientists &amp; Chemists  Association in Chicago </option>
+                    <option value="30">KITEE: Korean American Innovative Technology Engineers and Entrepreneurs  </option>
+                    <option value="31">KAPAL: Korean-American Professional Association in Life Sciences</option>
+                    <option value="32">IT: Information Technology</option>
+                </select>
+            </div>
+            <div>
+                <label for="keywordsRYE">Keywords to Represent Your Expertises </label>
+                <input type="text" id="keywordsRYE" placeholder="e.g. Chemistry, Math, Computer Science">
+            </div>
+            
+            <div class="input-gender">
+                <input type="radio" id="male"> <label for="male">Male</label>
+                <input type="radio" id="feMale"> <label for="female">Female</label>
+            </div>      
+        </div>
+        <!-- EDUCATION INFORMATION -->
+        <div *ngIf="false">
+            <div>
+                <label for="highestDegree">Highest Degree</label>
+                <select id="highestDegree" required>
+                    <option value="" selected>Select</option>
+                    <option value="D014">B.A.</option>
+                    <option value="D025">B.S.</option>
+                    <option value="D095">M.S.</option>
+                    <option value="D077">M.D.</option>
+                    <option value="D110">Ph.D.</option>
+                </select>
+                
+            </div>
+            <div>
+                <label for="yearEarned">Year Earned</label>
+                <input type="date" required>
+            </div>
+            <div>
+                <label for="schoolName">School name</label>
+                <input type="text" placeholder="schoolName" required>
+            </div>
+            <div>
+                <label for="schoolName">Thesis Title</label>
+                <input type="text" placeholder="Thesis Title" >
+            </div>    
+        </div>
+        <!-- WORK INFORMATION -->
+        <div *ngIf="false">
+            <div class="info-message">Student members can enter school information here</div>
+            <div>
+                <label for="affilication">Affiliation</label>
+                <input type="text" placeholder="School Name or Company Name" id="affilication" required>
+            </div>
+            <div>
+                <label for="department">Department</label>
+                <input type="text" placeholder="Department" id="department">
+            </div>
+            <div>
+                <label for="jopTitle"> Job Title</label>
+                <input type="text" placeholder="Job title" id="jopTitle">
+            </div>
+        </div>
+        <!-- payment INFORMATION -->
+        <div *ngIf="false">
+            <div>
+                <label for="">Billing Account</label>
+                <span>gildong.hong@gamil.com</span>
+            </div>
+            <div>
+                <label for="">Payment information <button>Managed payment info</button></label>
+                <div class="input-card">
+                <span class="select-card">
+                    <img src="assets/images/img_visa.png" alt="visa card">
+                </span>
+                <span>*****-****-****-1234</span>
+                </div>
+                <button>Billing details</button>
+            </div>
+            <div>
+                <label>Billing Date</label>
+                <div *ngIf="false">Your next billing date is <span>Jun 11, 2022</span></div>
+                
+                <div *ngIf="true">Your membership was expired at <span>Jun 11, 2022</span></div>
+            </div>
+        </div>
+        <div *ngIf="false">
+            <div>
+                Please join the membership
+            </div>
+        </div>
+        
+        <div class="wrap-btn">
+            <button class="btn-mypage">Reset</button>
+            <button class="btn-mypage">Save</button>
+        </div>
+</div>
+</div>
+<!-- [Dev] 이미 가입된 회원 아이디 일때 보여주는 다이얼로그 (22.5.31) -->
+<p-dialog header="Join membership" [(visible)]="displayJoinMembership">
+    <div>
+        <div>
+            <label for="">Billing Account</label>
+            <input type="email" placeholder="email">
+        </div>
+        <div class="input-name" >
+            <label for="Name">Name</label>
+            <input type="text" id="Name" placeholder="First Name">
+            <input type="text" placeholder="Middle Name">
+            <input type="text" placeholder="Last Name">
+        </div>
+        <div>
+            <label for="cardNum">Card number</label>
+            <div class="input-card">
+                <input type="number" id="cardNum">
+            <span class="select-card selected">
+                <img src="assets/images/img_visa.png" alt="visa card">
+            </span>
+            <span class="select-card">
+                <img src="assets/images/img_master.png" alt="master card">
+            </span>
+            </div>
+        </div>
+        <div  class="input-name">
+            <label for="expirationDate">Expiration date</label>
+            <input type="number" id="expirationDate" placeholder="MMYY">
+        </div>
+
+        <div class="input-name">
+            <label for="securityCode">Security Code</label>
+            <input type="number" id="securityCode">
+        </div>
+    </div>
+    <button>확인</button>
+</p-dialog>

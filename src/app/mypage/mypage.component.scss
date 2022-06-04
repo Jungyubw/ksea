@@ -1,0 +1,120 @@
+
+.wrap {
+    padding: 0 2rem;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+.wrap-mypage {
+    width: 77.5rem;
+    min-height: 50em;
+    height: auto;
+    box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.2);
+    display: flex;
+    justify-content: flex-start;
+}
+.wrap-lnb {
+    background-color:#3C5DB7 ;
+    color: #fff;
+    width: 17rem;
+    padding: 1em 2rem;
+}
+.lnb {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.lnb li {
+    cursor: pointer;
+    padding: 0.6em 0.6rem;
+    border-radius: 2px;
+}
+.lnb li:hover {
+    text-decoration: underline;
+}
+.lnb .selected {
+    // background-color: #8FA8ED;
+    font-weight: bold;
+}
+.con-wrap {
+    padding: 3em 3rem;
+    position: relative;
+}
+input, select {
+    border: 1px solid #CECECE;
+    height: 2.6rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 0 1rem;
+    width: 25rem ;
+}
+input::placeholder {
+    color: #B7B7B7;
+}
+.con-wrap div {
+    margin-bottom: 1.5em;
+
+}
+.con-wrap label {
+   display: block;
+   margin-bottom: 0.8em;
+}
+.input-name select {
+    width: 6rem;
+    margin-right: 0.6rem;
+}
+.input-name input {
+    width: 10rem;
+    margin-right: 0.6rem;
+}
+.input-address input {
+    display: block;
+    margin-bottom: 0.6em;
+}
+.input-address select {
+    display: block;
+    margin-bottom: 0.6em;
+} 
+.btn-mypage {
+    background-color: #B7B8BA;
+    border-radius: 1px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    width: 13.2rem;
+    padding: 0.8em 0;
+}
+.btn-mypage:hover {
+    background-color: #717274;
+}
+.wrap-btn {
+    margin-top: 1em;
+}
+.input-card {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 0.4rem;
+}
+.select-card {
+    border: 1px solid #B7B8BA;
+    border-radius: 8px;
+    display: inline-block;
+    height: 2.6em;
+    object-fit: cover;
+    cursor: pointer;
+}
+.input-card .selected {
+    border: 2px solid #3C5DB7;
+
+}
+.input-gender label {
+    display: inline-block;
+    padding: 0 0.5rem ;
+}
+input[type=radio] {
+    width: auto;
+    height: auto;
+    display: inline-block;
+}

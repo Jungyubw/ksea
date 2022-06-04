@@ -1,0 +1,10 @@
+<div class="wrap">
+    <div class="wrap-gnb">
+        <app-admin-gnb (selectEmitter)="receiveSelection($event)"></app-admin-gnb>
+    </div>
+    <div class="wrap-contents">
+        <app-chapter *ngIf="selection === 'Chapter Statistics'"></app-chapter>
+        <app-technical-group *ngIf="selection === 'TG Statistics'"></app-technical-group>
+        <app-aps *ngIf="selection === 'APS Statistics'"></app-aps>
+    </div>
+</div>

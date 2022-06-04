@@ -1,0 +1,31 @@
+<button type="button" (click)="reload()">Reload!</button>
+
+
+    <h5>Technical Group Member Chart</h5>
+    <p-chart type="bar" [data]="basicData" [options]="stackedOptions"></p-chart>
+
+
+    <h5>Technical Group Info Tables</h5>
+    <p-table [value]="technialGroups">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Code
+                        <p-columnFilter type="text" field="groupCode" display="groupCode"></p-columnFilter>
+                    </div>
+                </th>
+                <th>
+                    <div class="flex justify-content-center align-items-center">
+                        Description
+                        <p-columnFilter type="text" field="groupDesc" display="groupDesc"></p-columnFilter>
+                    </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-item>
+            <tr>
+                <td>{{item.groupCode}}</td>
+                <td>{{item.groupDesc}}</td>
+            </tr>
+        </ng-template>
