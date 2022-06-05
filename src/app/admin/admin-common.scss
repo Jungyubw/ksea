@@ -31,7 +31,7 @@ h2 {
 .wrap-sub-title h2 {
     font-size: 1.25rem;
 }
-.btn_blue, .btn_gray, .btn_deep_gray  {
+.btn_blue, .btn_gray, .btn_deep_gray, .btn_red  {
     font-weight: bold;
     border-radius: 2px;
     padding: 0.4em 1rem ;
@@ -60,6 +60,14 @@ h2 {
     background-color: #717274;
 }
 .btn_deep_gray:hover {
+    background-color: #B7B8BA;
+}
+.btn_red {
+    color: rgb(245, 9, 9);
+    border: 1px solid #464646;
+    background-color: #717274;
+}
+.btn_red:hover {
     background-color: #B7B8BA;
 }
 .table-data th {

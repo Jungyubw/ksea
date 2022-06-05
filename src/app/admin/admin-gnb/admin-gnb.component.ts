@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-gnb',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class AdminGnbComponent implements OnInit {
   @Output() selectEmitter = new EventEmitter<string> ();  
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +17,7 @@ export class AdminGnbComponent implements OnInit {
   onClick(select:string){
     this.selectEmitter.emit(select);  
   }
-
+  redirect() {
+    this.router.navigate(['main']);
+  }
 }

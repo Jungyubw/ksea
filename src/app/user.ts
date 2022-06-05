@@ -1,8 +1,8 @@
 import { Data } from "@angular/router";
-import { APS_DEF } from "./aps_def";
-import { Chapter } from "./chapter";
-import { SPECIALITY_DEF } from "./specialty_def";
-import { Technical_Group } from "./technical_group";
+import { APS_DEF } from "./domain/aps_def";
+import { Chapter } from "./domain/chapter";
+import { SPECIALITY_DEF } from "./domain/specialty_def";
+import { Technical_Group } from "./domain/technical_group";
 
 export interface User {
     memberId: string;

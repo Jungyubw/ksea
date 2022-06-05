@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { UserService } from '../services/user.service';
 import { User } from '../user';
 import { Papa } from 'ngx-papaparse';
 
@@ -18,5 +18,6 @@ export class AdminComponent implements OnInit {
   } 
 
   ngOnInit(): void {
+    console.log('ADMIN Called');
   }
 }

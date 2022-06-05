@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-front',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontComponent implements OnInit {
 
-  constructor() { }
+  selection: string = 'main';
+
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit(): void {
   }
 
+  receiveSelection($event: string) {  
+    this.selection = $event;
+    console.log(this.selection);
+  } 
 }

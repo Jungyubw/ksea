@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/user';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-member-management',
@@ -10,6 +10,7 @@ import { UserService } from 'src/app/user.service';
 export class MemberManagementComponent implements OnInit {
   users: User[] = [];
   selectedUsers: User[] = [];
+  selectedUsersEmails:string='';
 
   displaySendEmail = false;
   constructor(private userService: UserService) { }
@@ -21,8 +22,24 @@ export class MemberManagementComponent implements OnInit {
   }
   showSendEmail() {
     this.displaySendEmail  = !this.displaySendEmail ;
+    this.selectedUsersEmails =  this.getEmails();
   }
+
+  deleteAccounts() {
+    this.users = this.users.filter(item => this.selectedUsers.indexOf(item) < 0);
+    this.selectedUsers = [];
+  }
+
   closeDlg() {
     this.displaySendEmail = false;
+  }
+
+  getEmails(){
+    let result:string[] = [];
+    this.selectedUsers.forEach(u => {
+      if(u.email && u.email.indexOf('@') > 0) result.push(u.email);
+    });
+    
+    return result.toString();
   }
 }

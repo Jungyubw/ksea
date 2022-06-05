@@ -1,11 +1,13 @@
 <header>
-    <app-gnb></app-gnb>
+    <app-gnb (selectEmitter)="receiveSelection($event)"></app-gnb>
 </header>
 <div class="wrap">
-    <app-signin *ngIf="false"></app-signin>
-    <app-mypage *ngIf="true"></app-mypage>
-    <app-main *ngIf="false"></app-main>
+
+    <app-login (selectEmitter)="receiveSelection($event)" *ngIf="selection === 'login'"></app-login>
+    <app-signin (selectEmitter)="receiveSelection($event)" *ngIf="selection === 'signin'"></app-signin>
+    <app-mypage *ngIf="selection === 'mypage'"></app-mypage>
+    <app-main (selectEmitter)="receiveSelection($event)" *ngIf="selection === 'main'"></app-main>
     <!-- sub page -->
-    <app-board-notice *ngIf="false"></app-board-notice>
+    <app-board-notice *ngIf="selection === 'board-notice'"></app-board-notice>
     <app-footer></app-footer>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Technical_Group } from 'src/app/technical_group';
+import { Technical_Group } from 'src/app/domain/technical_group';
 import { User } from 'src/app/user';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-technical-group',
@@ -12,6 +12,10 @@ export class TechnicalGroupComponent implements OnInit {
 
 
   technialGroups: Technical_Group[] = [];
+  newItem: Technical_Group = {
+    groupCode: '',
+    groupDesc: ''
+  };
   users: User[] = [];
 
   basicData: any;
@@ -19,8 +23,6 @@ export class TechnicalGroupComponent implements OnInit {
   stackedOptions: any;
 
   displayAddTG = false;
-
-  displayEditTG = false;
 
   constructor(private userService: UserService) { }
 
@@ -173,12 +175,17 @@ export class TechnicalGroupComponent implements OnInit {
   }
   showAdd() {
     this.displayAddTG = !this.displayAddTG;
-  }
-  showEdit() {
-    this.displayEditTG= !this.displayEditTG;
+    this.newItem = {
+      groupCode: '',
+      groupDesc: ''
+    };
   }
   closeDlg() {
     this.displayAddTG = false;
-    this.displayEditTG = false;
+  }
+  saveAndCloseDlg() {
+    this.displayAddTG = false;
+    this.technialGroups.push(this.newItem);
+    this.reload();
   }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-signin',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-
+  @Output() selectEmitter = new EventEmitter<string> ();  
   displayPW = true;
 
   constructor() { }
@@ -14,4 +15,8 @@ export class SigninComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick(select:string){
+    this.selectEmitter.emit(select);  
+  }
 }
+

@@ -52,23 +52,111 @@
                 <th>DateApproved</th>
                 <th>KseaId</th>
                 <th>ProCode</th>
-                <th>Edit</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-cha>
             <tr>
                 <td>{{cha.chapterCode}}</td>
-                <td>{{cha.chapterType}}</td>
-                <td>{{cha.chapterName}}</td>
-                <td>{{cha.chapterLoc}}</td>
-                <td>{{cha.chapterUrl}}</td>
-                <td>{{cha.subDomain}}</td>
-                <td>{{cha.presidentId}}</td>
-                <td>{{cha.MDId}}</td>
-                <td>{{cha.dateApproved}}</td>
-                <td>{{cha.kseaId}}</td>
-                <td>{{cha.pro_code}}</td>
-                <td> <button class="btn_gray" (click)="showEdit()">Edit</button></td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.chapterType">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.chapterType}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.chapterName">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.chapterName}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.chapterLoc">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.chapterLoc}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.chapterUrl">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.chapterUrl}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.subDomain">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.subDomain}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.presidentId">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.presidentId}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.MDId">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.MDId}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="date" [(ngModel)]="cha.dateApproved">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.dateApproved}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.kseaId">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.kseaId}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="cha.pro_code">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{cha.pro_code}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
             </tr>
         </ng-template>
     </p-table>
@@ -79,107 +167,52 @@
         <ul class="input-data">
             <li>
                 <label for="chapterCode">Code</label>
-                <input type="text" name="" id="chapterCode" placeholder="Code">
+                <input type="text" name="" id="chapterCode" [(ngModel)]="newItem.chapterCode" placeholder="Code">
             </li>
             <li>
                 <label for="cahpterType">Type</label>
-                <input type="text" name="" id="chapterType" placeholder="Type">
+                <input type="text" name="" id="chapterType" [(ngModel)]="newItem.chapterType" placeholder="Type">
             </li>
             <li>
                 <label for="cahpterName">Name</label>
-                <input type="text" name="" id="chapterName" placeholder="Name">
+                <input type="text" name="" id="chapterName" [(ngModel)]="newItem.chapterName" placeholder="Name">
             </li>
             <li>
                 <label for="cahpterLoc">Location</label>
-                <input type="text" name="" id="chapterLoc" placeholder="Location">
+                <input type="text" name="" id="chapterLoc" [(ngModel)]="newItem.chapterLoc" placeholder="Location">
             </li>
             <li>
                 <label for="chapterUrl">Url</label>
-                <input type="text" name="" id="chapterUrl" placeholder="Url">
+                <input type="text" name="" id="chapterUrl" [(ngModel)]="newItem.chapterUrl" placeholder="Url">
             </li>
             <li>
                 <label for="subDomain">Domain</label>
-                <input type="text" name="" id="subDomain" placeholder="Domain">
+                <input type="text" name="" id="subDomain" [(ngModel)]="newItem.subDomain" placeholder="Domain">
             </li>
             <li>
                 <label for="presidentId">President</label>
-                <input type="text" name="" id="presidentId" placeholder="President">
+                <input type="text" name="" id="presidentId" [(ngModel)]="newItem.presidentId" placeholder="President">
             </li>
             <li>
                 <label for="MDId">MDId</label>
-                <input type="text" name="" id="MDId" placeholder="MDId">
+                <input type="text" name="" id="MDId" [(ngModel)]="newItem.MDId" placeholder="MDId">
             </li>
             <li>
                 <label for="dateApproved">Date Approved</label>
-                <input type="text" name="" id="dateApproved" placeholder="Date Approved">
+                <input type="date" name="" id="dateApproved" [(ngModel)]="newItem.dateApproved" placeholder="Date Approved">
             </li>
             <li>
                 <label for="kseaId">Ksea Id</label>
-                <input type="text" name="" id="kseaId" placeholder="Ksea Id">
+                <input type="text" name="" id="kseaId" [(ngModel)]="newItem.kseaId" placeholder="Ksea Id">
             </li>
             <li>
                 <label for="pro_code">Pro code</label>
-                <input type="text" name="" id="pro_code" placeholder="Pro code">
+                <input type="text" name="" id="pro_code" [(ngModel)]="newItem.pro_code" placeholder="Pro code">
             </li>
         </ul>
         <div class="dlg-btn-g">
             <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
-            <button class="btn_dlg_blue">Save</button>
-        </div>
-    </div>
-</p-dialog>
-<!-- [Dev] 데이터 수정 Diglog : 수정해야 하는 값이 인풋에 들어 있어야 함-->
-<p-dialog header="Edit chapter" [(visible)]="displayEditChapter"  [modal]="true">
-    <div class="wrap-dlg">
-        <ul class="input-data">
-            <li>
-                <label for="chapterCode">Code</label>
-                <Span>01</Span>
-            </li>
-            <li>
-                <label for="cahpterType">Type</label>
-                <input type="text" name="" id="chapterType" placeholder="Type">
-            </li>
-            <li>
-                <label for="cahpterName">Name</label>
-                <input type="text" name="" id="chapterName" placeholder="Name">
-            </li>
-            <li>
-                <label for="cahpterLoc">Location</label>
-                <input type="text" name="" id="chapterLoc" placeholder="Location">
-            </li>
-            <li>
-                <label for="chapterUrl">Url</label>
-                <input type="text" name="" id="chapterUrl" placeholder="Url">
-            </li>
-            <li>
-                <label for="subDomain">Domain</label>
-                <input type="text" name="" id="subDomain" placeholder="Domain">
-            </li>
-            <li>
-                <label for="presidentId">President</label>
-                <input type="text" name="" id="presidentId" placeholder="President">
-            </li>
-            <li>
-                <label for="MDId">MDId</label>
-                <input type="text" name="" id="MDId" placeholder="MDId">
-            </li>
-            <li>
-                <label for="dateApproved">Date Approved</label>
-                <input type="text" name="" id="dateApproved" placeholder="Date Approved">
-            </li>
-            <li>
-                <label for="kseaId">Ksea Id</label>
-                <input type="text" name="" id="kseaId" placeholder="Ksea Id">
-            </li>
-            <li>
-                <label for="pro_code">Pro code</label>
-                <input type="text" name="" id="pro_code" placeholder="Pro code">
-            </li>
-        </ul>
-        <div class="dlg-btn-g">
-            <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
-            <button class="btn_dlg_blue">Save</button>
+            <button class="btn_dlg_blue" (click)="saveAndCloseDlg()">Save</button>
         </div>
     </div>
 </p-dialog>

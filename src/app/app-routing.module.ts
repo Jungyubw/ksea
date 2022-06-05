@@ -4,7 +4,7 @@ import { FrontComponent } from './front/front.component';
 import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
-  // { path: '',   redirectTo: './front/front.component', pathMatch: 'full' },
+  { path: '',   redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: FrontComponent },
   { path: 'admin', component: AdminComponent },
 ];

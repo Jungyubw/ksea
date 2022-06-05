@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MS_DEF } from 'src/app/ms_def';
-import { SPECIALITY_DEF } from 'src/app/specialty_def';
+import { MS_DEF } from 'src/app/domain/ms_def';
+import { SPECIALITY_DEF } from 'src/app/domain/specialty_def';
 import { User } from 'src/app/user';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-specialty',

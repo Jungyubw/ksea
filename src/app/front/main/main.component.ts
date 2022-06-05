@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
-
+  @Output() selectEmitter = new EventEmitter<string> ();  
+  
+  constructor(private userService: UserService) {
+  }
+  
   ngOnInit(): void {
+  }
+
+  onClick(select:string){
+    this.selectEmitter.emit(select);  
+    console.log(select);
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { APS_DEF } from 'src/app/aps_def';
+import { APS_DEF } from 'src/app/domain/aps_def';
 import { User } from 'src/app/user';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-aps',
@@ -10,6 +10,16 @@ import { UserService } from 'src/app/user.service';
 })
 export class ApsComponent implements OnInit {
   apsdefs: APS_DEF[] = [];
+  selectedItems: APS_DEF[] = [];
+  newItem: APS_DEF={
+    apsID: '',
+    apsName: '',
+    apsFullName: '',
+    apsURL: '',
+    temp: '',
+    presidentID: '',
+    isActive: ''
+  };
   users: User[] = [];
 
   basicData: any;
@@ -177,6 +187,15 @@ export class ApsComponent implements OnInit {
   }
   showAdd() {
     this.displayAddAPS = !this.displayAddAPS;
+    this.newItem ={
+      apsID: '',
+      apsName: '',
+      apsFullName: '',
+      apsURL: '',
+      temp: '',
+      presidentID: '',
+      isActive: ''
+    };
   }
   showEdit() {
     this.displayEditAPS= !this.displayEditAPS;
@@ -184,5 +203,11 @@ export class ApsComponent implements OnInit {
   closeDlg() {
     this.displayAddAPS = false;
     this.displayEditAPS = false;
+  }
+  closeAndSaveDlg(){
+    this.displayAddAPS = false;
+    this.displayEditAPS = false;
+    this.apsdefs.push(this.newItem);
+    this.reload();
   }
 }

@@ -1,0 +1,41 @@
+<div class="wrap">
+    <div class="con-input">
+        <h3 class="title">Login</h3>
+        <ul class="input-g">
+            <li>
+                <input type="text" placeholder="ID">
+            </li>
+            <li>
+                <input type="password" placeholder="Password">
+            </li>
+        </ul>
+        <p class="btn-text">Forgot your password?</p>
+        <button class="btn-signin">Login</button>
+        <p class="btn-text" (click)="onClick('signin')">Not on KSEA yet? Sign up</p>
+    </div>
+    <div class="con-input" *ngIf="false">
+        <h3 class="title">Reset password</h3>
+        <ul class="input-g">
+            <li>
+                <input type="password" placeholder="Password">
+            </li>
+            <li>
+                <input type="password" placeholder="Confirm password">
+            </li>
+        </ul>
+
+        <button class="btn-signin">Save</button>
+    </div>
+    <div class="con-img">
+        <img src="assets/images/" alt="">
+    </div>
+</div>
+<!-- [Dev] 이미 가입된 회원 아이디 일때 보여주는 다이얼로그 (22.5.31) -->
+<p-dialog header="Password Reset" [(visible)]="displayPW" [modal]="true">
+    <div class="dlg-massege">
+        본 아이디의 비밀번호 재설정이 필요합니다.<br>
+    암호 변경을 위해 <span>gildong.hong@abcd.com</span>(으)로 이메일 발송되었습니다.<br>
+    메일을 확인하여 주십시오
+    </div>
+    <button>확인</button>
+</p-dialog>

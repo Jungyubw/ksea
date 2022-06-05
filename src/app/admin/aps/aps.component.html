@@ -8,9 +8,12 @@
         <h3>APS Info Tables</h3>
         <button class="btn_gray" (click)="showAdd()">ADD</button>
     </div>
-    <p-table [value]="apsdefs" class="table-data">
+    <p-table [value]="apsdefs" [(selection)]="selectedItems" dataKey="apsID" responsiveLayout="scroll">
         <ng-template pTemplate="header">
             <tr>
+                <th style="width: 3rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
                 <th>
                     <div class="flex justify-content-center align-items-center">
                         ID
@@ -41,17 +44,54 @@
                         <p-columnFilter type="text" field="presidentID" display="presidentID"></p-columnFilter>
                     </div>
                 </th>
-                <th>Edit</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-item>
+        <ng-template pTemplate="body" let-rowData let-item>
             <tr>
+                <td>
+                    <p-tableCheckbox [value]="item"></p-tableCheckbox>
+                </td>
                 <td>{{item.apsID}}</td>
-                <td>{{item.apsName}}</td>
-                <td>{{item.apsFullName}}</td>
-                <td>{{item.apsURL}}</td>
-                <td>{{item.presidentID}}</td>
-                <td> <button class="btn_gray" (click)="showEdit()">Edit</button></td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="item.apsName">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{item.apsName}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="item.apsFullName">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{item.apsFullName}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="item.apsURL">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{item.apsURL}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="item.presidentID">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{item.presidentID}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
             </tr>
         </ng-template>
     </p-table>
@@ -62,28 +102,28 @@
         <ul class="input-data">
             <li>
                 <label for="apsID">ID</label>
-                <input type="text" name="" id="apsID" placeholder="ID">
+                <input type="text" name="" id="apsID" [(ngModel)]="newItem.apsID" placeholder="ID">
             </li>
             <li>
                 <label for="apsName">Name</label>
-                <input type="text" name="" id="apsName" placeholder="Name">
+                <input type="text" name="" id="apsName" [(ngModel)]="newItem.apsName" placeholder="Name">
             </li>
             <li>
                 <label for="apsFullName">Full Name</label>
-                <input type="text" name="" id="apsFullName" placeholder="Full Name">
+                <input type="text" name="" id="apsFullName" [(ngModel)]="newItem.apsFullName" placeholder="Full Name">
             </li>
             <li>
                 <label for="apsURL">Url</label>
-                <input type="text" name="" id="apsURL" placeholder="Url">
+                <input type="text" name="" id="apsURL" [(ngModel)]="newItem.apsURL" placeholder="Url">
             </li>
             <li>
                 <label for="presidentId">President</label>
-                <input type="text" name="" id="presidentId" placeholder="President">
+                <input type="text" name="" id="presidentID" [(ngModel)]="newItem.presidentID" placeholder="President">
             </li>
         </ul>
         <div class="dlg-btn-g">
             <button class="btn_dlg_gray" (click)="closeDlg()">Cancel</button>
-            <button class="btn_dlg_blue">Save</button>
+            <button class="btn_dlg_blue" (click)="closeAndSaveDlg()">Save</button>
         </div>
     </div>
 </p-dialog>

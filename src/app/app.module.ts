@@ -27,6 +27,7 @@ import { TechnicalGroupComponent } from './admin/technical-group/technical-group
 import { ApsComponent } from './admin/aps/aps.component';
 import { SpecialtyComponent } from './admin/specialty/specialty.component';
 import { MemberManagementComponent } from './admin/member-management/member-management.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { MemberManagementComponent } from './admin/member-management/member-mana
     ApsComponent,
     SpecialtyComponent,
     MemberManagementComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

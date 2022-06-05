@@ -3,17 +3,17 @@
 <div class="wrap-mypage">
     <div class="wrap-lnb">
         <ul class="lnb">
-            <li class="selected"> Personal information</li>
-            <li> KSEA information</li>
-            <li>Education information</li>
-            <li>Work information</li>
-            <li>Payment information</li>
+            <li (click)="selection = 'PERSONAL'" class="selected">Personal information</li>
+            <li (click)="selection = 'KSEA'">KSEA information</li>
+            <li (click)="selection = 'EDUCATION'">Education information</li>
+            <li (click)="selection = 'WORK'">Work information</li>
+            <li (click)="selection = 'PAYMENT'">Membership Information</li>
             
         </ul>
     </div>
     <div class="con-wrap">
         <!-- PERSONAL INFORMATION -->
-        <div *ngIf="false">
+        <div *ngIf="selection === 'PERSONAL'">
             <div class="input-name" >
                 <label for="Name">Name</label>
                 <select id="Name" required>
@@ -67,7 +67,7 @@
             </div>           
         </div>
         <!-- KSEA CATEGORY -->
-        <div *ngIf="true">
+        <div *ngIf="selection === 'KSEA'">
             <div >
                 <label for="memberType">Member Type</label>
                 <select id="memberType" required>
@@ -314,7 +314,7 @@
             </div>      
         </div>
         <!-- EDUCATION INFORMATION -->
-        <div *ngIf="false">
+        <div *ngIf="selection === 'EDUCATION'">
             <div>
                 <label for="highestDegree">Highest Degree</label>
                 <select id="highestDegree" required>
@@ -341,7 +341,7 @@
             </div>    
         </div>
         <!-- WORK INFORMATION -->
-        <div *ngIf="false">
+        <div *ngIf="selection === 'WORK'">
             <div class="info-message">Student members can enter school information here</div>
             <div>
                 <label for="affilication">Affiliation</label>
@@ -356,14 +356,17 @@
                 <input type="text" placeholder="Job title" id="jopTitle">
             </div>
         </div>
-        <!-- payment INFORMATION -->
-        <div *ngIf="false">
+        <!-- PAYMENT INFORMATION -->
+        <div *ngIf="selection === 'PAYMENT'">
+            <div>
+                <label for="">You are regualr member</label>
+            </div>
             <div>
                 <label for="">Billing Account</label>
                 <span>gildong.hong@gamil.com</span>
             </div>
             <div>
-                <label for="">Payment information <button>Managed payment info</button></label>
+                <label for="">Payment information <button (click)="displayJoinMembership = true">Managed payment info</button></label>
                 <div class="input-card">
                 <span class="select-card">
                     <img src="assets/images/img_visa.png" alt="visa card">
@@ -392,7 +395,7 @@
 </div>
 </div>
 <!-- [Dev] 이미 가입된 회원 아이디 일때 보여주는 다이얼로그 (22.5.31) -->
-<p-dialog header="Join membership" [(visible)]="displayJoinMembership">
+<p-dialog header="Manage Payment" [(visible)]="displayJoinMembership">
     <div>
         <div>
             <label for="">Billing Account</label>

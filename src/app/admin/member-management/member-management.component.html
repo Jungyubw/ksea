@@ -3,9 +3,10 @@
         <h2>Users Tables</h2>
         <button class="btn_blue" type="button" (click)="reload()">Reload!</button>
         <button class="btn_deep_gray" type="button" (click)="showSendEmail()">Send Email</button>
+        <button class="btn_red" type="button" (click)="deleteAccounts()">Del Accounts</button>
     </div>
-    <p-table [value]="users" [(selection)]="selectedUsers" dataKey="code" [paginator]="true" [rows]="50" [showCurrentPageReport]="true" responsiveLayout="scroll"
-            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[50,100,150]"  class="table-data">
+    <p-table [value]="users" [(selection)]="selectedUsers" dataKey="memberId" [paginator]="true" [rows]="50" [showCurrentPageReport]="true" responsiveLayout="scroll"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[50,100,150]">
         <ng-template pTemplate="header">
             <tr>
                 <th style="width: 3rem">
@@ -467,69 +468,579 @@
                 <td>{{user.memberId}}</td>
                 <td>{{user.KSEAId}}</td>
                 <td>{{user.loginId}}</td>
-                <td>{{user.firstName}}</td>
-                <td>{{user.lastName}}</td>
-                <td>{{user.gender}}</td>
-                <td>{{user.birth| date: 'MM/dd/yyyy'}}</td>
-                <td>{{user.title}}</td>
-                <td>{{user.email}}</td>
 
-                <td>{{user.homepageUrl}}</td>
-                <td>{{user.homePhone}}</td>
-                <td>{{user.homeCell}}</td>
-                <td>{{user.homeFax}}</td>
-                <td>{{user.homeStreet}}</td>
-                <td>{{user.homeCity}}</td>
-                <td>{{user.homeState}}</td>
-                <td>{{user.homeProvince}}</td>
-                <td>{{user.homeZip}}</td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.firstName">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.firstName}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.lastName">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.lastName}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.gender">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.gender}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="date" [(ngModel)]="user.birth">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.birth| date: 'MM/dd/yyyy'}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.title">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.title}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.email">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.email}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homepageUrl">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homepageUrl}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homePhone">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homePhone}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homeCell">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homeCell}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homeFax">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homeFax}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homeStreet">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homeStreet}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homeCity">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homeCity}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homeState">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homeState}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homeProvince">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homeProvince}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homeZip">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homeZip}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.billFirstName">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.billFirstName}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.billLastName">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.billLastName}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.billStreet">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.billStreet}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.billCity">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.billCity}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.billState">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.billState}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.billProvince">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.billProvince}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.billZip">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.billZip}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.affiliation">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.affiliation}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.department">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.department}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.jobTitle">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.jobTitle}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workHomeUrl">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workHomeUrl}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workEmail">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workEmail}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workPhone">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workPhone}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workStreet">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workStreet}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workCity">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workCity}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workState">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workState}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workProvince">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workProvince}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workZip">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workZip}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
 
-                <td>{{user.billFirstName}}</td>
-                <td>{{user.billLastName}}</td>
-                <td>{{user.billStreet}}</td>
-                <td>{{user.billCity}}</td>
-                <td>{{user.billState}}</td>
-                <td>{{user.billProvince}}</td>
-                <td>{{user.billZip}}</td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.prefContact">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.prefContact}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.isInMemberDir">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.isInMemberDir}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.memberType">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.memberType}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.isYPG">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.isYPG}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.memberStatus">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.memberStatus}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.accessRight">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.accessRight}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.registeredDateFormatted">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.registeredDateFormatted| date: 'MM/dd/yyyy'}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.lastUpdatedFormatted">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.lastUpdatedFormatted| date: 'MM/dd/yyyy'}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.lastIPUsed">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.lastIPUsed}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.updatedBy">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.updatedBy}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.lastVisitFormatted">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.lastVisitFormatted| date: 'MM/dd/yyyy'}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.visitCountFormatted">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.visitCountFormatted'}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.lastPaidDateFormatted">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.lastPaidDateFormatted| date: 'MM/dd/yyyy'}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
 
-                <td>{{user.affiliation}}</td>
-                <td>{{user.department}}</td>
-                <td>{{user.jobTitle}}</td>
-
-                <td>{{user.workHomeUrl}}</td>
-                <td>{{user.workEmail}}</td>
-                <td>{{user.workPhone}}</td>
-                <td>{{user.workStreet}}</td>
-                <td>{{user.workCity}}</td>
-                <td>{{user.workState}}</td>
-                <td>{{user.workProvince}}</td>
-                <td>{{user.workZip}}</td>
-
-                <td>{{user.prefContact}}</td>
-                <td>{{user.isInMemberDir}}</td>
-                <td>{{user.memberType}}</td>
-                <td>{{user.isYPG}}</td>
-                <td>{{user.memberStatus}}</td>
-                <td>{{user.accessRight}}</td>
-                <td>{{user.registeredDateFormatted| date: 'MM/dd/yyyy'}}</td>
-                <td>{{user.lastUpdatedFormatted| date: 'MM/dd/yyyy'}}</td>
-                <td>{{user.lastIPUsed}}</td>
-                <td>{{user.updatedBy}}</td>
-                <td>{{user.lastVisitFormatted| date: 'MM/dd/yyyy'}}</td>
-                <td>{{user.visitCountFormatted}}</td>
-                <td>{{user.lastPaidDateFormatted| date: 'MM/dd/yyyy'}}</td>
-
-                <td>{{user.middleName}}</td>
-                <td>{{user.workFax}}</td>
-                <td>{{user.birthPlace}}</td>
-                <td>{{user.workCountry}}</td>
-                <td>{{user.citizenship}}</td>
-                <td>{{user.homeCountry}}</td>
-                <td>{{user.remark}}</td>
-                <td>{{user.profileStatus}}</td>
-                <td>{{user.e_signature}}</td>
-                <td>{{user.kofst_agree}}</td>
-                <td>{{user.subscription}}</td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.middleName">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.middleName}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workFax">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workFax}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.birthPlace">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.birthPlace}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.workCountry">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.workCountry}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.citizenship">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.citizenship}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.homeCountry">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.homeCountry}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.remark">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.remark}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.profileStatus">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.profileStatus}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.e_signature">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.e_signature}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.kofst_agree">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.kofst_agree}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.subscription">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.subscription}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
 
                 <td>
                     <div *ngIf="user.chapter">
@@ -587,16 +1098,16 @@
                         {{user.specialty3.SubSpecialtyDesc}}
                     </div>
                 </td>
-
-                <td>{{user.specialtyKeywords}}</td>
-
-
-
-    <!--
-
-        apsList?: APS_DEF[];
-        specialtyList?: SPECIALITY_DEF[];
-        -->
+                <td pEditableColumn>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="user.specialtyKeywords">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{user.specialtyKeywords}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
             </tr>
         </ng-template>
     </p-table>
@@ -609,7 +1120,7 @@
         <ul class="input-email">
             <li>
                 <label for="mailTo">To</label>
-                <input type="text" name="" id="mailTo" placeholder="abc@ksea.org">
+                <input type="text" name="" id="mailTo" [(ngModel)]="selectedUsersEmails" placeholder="abc@ksea.org">
             </li>
             <li>
                 <label for="mailTitle">Title</label>

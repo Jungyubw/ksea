@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MypageComponent implements OnInit {
 
+  selection = 'PERSONAL';
   displayJoinMembership = false;
 
   constructor() { }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Chapter } from 'src/app/chapter';
+import { Chapter } from 'src/app/domain/chapter';
 import { User } from 'src/app/user';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-chapter',
@@ -11,6 +11,20 @@ import { UserService } from 'src/app/user.service';
 export class ChapterComponent implements OnInit {
 
   chapters: Chapter[] = [];
+  newItem: Chapter = {
+    chapterCode: '',
+    chapterType: '',
+    chapterName: '',
+    chapterLoc: '',
+    chapterUrl: '',
+    subDomain: '',
+    presidentId: '',
+    MDId: '',
+    dateApproved: '',
+    kseaId: '',
+    pro_code: ''
+  };
+
   users: User[] = [];
 
   basicData: any;
@@ -18,8 +32,6 @@ export class ChapterComponent implements OnInit {
   stackedOptions: any;
 
   displayAddChapter = false;
-
-  displayEditChapter = false;
 
   constructor(private userService: UserService) { }
 
@@ -172,13 +184,27 @@ export class ChapterComponent implements OnInit {
     }
 
     showAdd() {
+      this.newItem = {
+        chapterCode: '',
+        chapterType: '',
+        chapterName: '',
+        chapterLoc: '',
+        chapterUrl: '',
+        subDomain: '',
+        presidentId: '',
+        MDId: '',
+        dateApproved: '',
+        kseaId: '',
+        pro_code: ''
+      };
       this.displayAddChapter = !this.displayAddChapter;
-    }
-    showEdit() {
-      this.displayEditChapter = !this.displayEditChapter;
     }
     closeDlg() {
       this.displayAddChapter = false;
-      this.displayEditChapter = false;
+    }
+    saveAndCloseDlg() {
+      this.displayAddChapter = false;
+      this.chapters.push(this.newItem);
+      this.reload();
     }
 }
