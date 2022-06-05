@@ -1,0 +1,21 @@
+.vision {
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
+}
+.wrap-about {
+    background-image: url(/assets/images/bg_sub_notice.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.wrap-contents {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+.img-ks-president {
+    width: 32.5rem;
+}
+.wrap-txt {
+    line-height: 2.5;
+}

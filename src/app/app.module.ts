@@ -28,6 +28,9 @@ import { ApsComponent } from './admin/aps/aps.component';
 import { SpecialtyComponent } from './admin/specialty/specialty.component';
 import { MemberManagementComponent } from './admin/member-management/member-management.component';
 import { LoginComponent } from './login/login.component';
+import { MembershipComponent } from './front/membership/membership.component';
+import { AboutComponent } from './front/about/about.component';
+import { OrganizationComponent } from './front/organization/organization.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { LoginComponent } from './login/login.component';
     SpecialtyComponent,
     MemberManagementComponent,
     LoginComponent,
+    MembershipComponent,
+    AboutComponent,
+    OrganizationComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+.wrap-membership {
+    display: flex;
+    justify-content: center;
+    align-self: baseline;
+    column-gap: 4rem;
+}
+.card-membership {
+    position: relative;
+    height: 28.2rem;
+    width: 20rem;
+    padding: 2rem;
+    padding-top: 8rem;
+    border: 1px solid #DEE2F0;
+    border-radius: 4px;
+    box-shadow: 0 0 2rem rgba($color: #000000, $alpha: 0.1);
+    line-height: 2.5;
+}
+.member-type-txt {
+    position: absolute;
+    z-index: 2;
+    left:4rem;
+    top:0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 2rem rgba($color: #000000, $alpha: 0.1);
+}
+.member-type {
+    position: absolute;
+    left: -2rem;
+    top: 2rem;
+}
+.info-membership {
+    display: flex;
+    flex-direction: column;
+}
+.card-membership > button {
+    position: absolute;
+    bottom: 2em;
+    left: 3rem;
+    width: 14rem;
+    padding: 0.8em 1rem;
+    color: #fff;
+    background-color: #717274;
+    font-size: 0.875rem;
+}
+.card-membership > button:hover {
+    background-color: #B7B8BA;
+}
