@@ -6,7 +6,7 @@
         <button class="btn_red" type="button" (click)="deleteAccounts()">Del Accounts</button>
     </div>
     <p-table [value]="users" [(selection)]="selectedUsers" dataKey="memberId" [paginator]="true" [rows]="50" [showCurrentPageReport]="true" responsiveLayout="scroll"
-            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[50,100,150]">
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[50,100,150]" class="table-data">
         <ng-template pTemplate="header">
             <tr>
                 <th style="width: 3rem">
