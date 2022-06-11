@@ -17,17 +17,23 @@
     cursor: pointer;
     font-weight: normal;
     line-height: 2;
-    padding: 0.2em 0.4rem;
+    padding: 0.2em 0.6rem;
     width: 12rem;
     border-radius: 2px;
+    font-size: 0.875rem;
+    margin-bottom: 1em;
+}
+.selected_navi {
+    background-color: #193D9A;
 }
 .gnb li:hover {
-    background-color: #1A2541;
+    background-color: #193D9A;
 }
 .con-logout {
     position: fixed;
     bottom: 2.5vh;
     text-align: center;
+    width: 12rem;
 }
 .btn-logout {
     background-color: #213D88;
@@ -35,7 +41,7 @@
     width: 10rem;
     border-radius: 4px;
     height: 2em;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
 }
 .btn-logout:hover {
     background-color: #1A2541;
