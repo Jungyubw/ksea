@@ -32,12 +32,12 @@ export class UserService {
   private specialty_members: SPECIALTY_MEMBER[] = [];
   private specialtyDefs: SPECIALITY_DEF[] = [];
 
-  private userUrl = "http://localhost:3000/api/users/";
-  private chapterUrl = "http://localhost:3000/api/chapters/";
-  private apsUrl = "http://localhost:3000/api/aps/";
-  private groupUrl = "http://localhost:3000/api/groups/";
-  private specialtyUrl = "http://localhost:3000/api/specialty/";
-  private msdefUrl = "http://localhost:3000/api/msdef";
+  private userUrl = "/api/users/";
+  private chapterUrl = "/api/chapters/";
+  private apsUrl = "/api/aps/";
+  private groupUrl = "/api/groups/";
+  private specialtyUrl = "/api/specialty/";
+  private msdefUrl = "/api/msdef/";
 
   constructor(http: HttpClient, private papa: Papa) {
     this.httpClient = http;
