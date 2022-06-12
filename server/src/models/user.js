@@ -1,7 +1,122 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
 
-// 스키마 생성
+const ChapterCodeSchema = new mongoose.Schema({
+  chapterCode: {
+    type: String,
+    trim: true,
+  },
+  chapterType: {
+    type: String,
+    trim: true,
+  },
+  chapterName: {
+    type: String,
+    trim: true,
+  },
+  chapterLoc: {
+    type: String,
+    trim: true,
+  },
+  chapterUrl: {
+    type: String,
+    trim: true,
+  },
+  subDomain: {
+    type: String,
+    trim: true,
+  },
+  presidentId: {
+    type: String,
+    trim: true,
+  },
+  MDId: {
+    type: String,
+    trim: true,
+  },
+  dateApproved: {
+    type: String,
+    trim: true,
+  },
+  kseaId: {
+    type: String,
+    trim: true,
+  },
+  pro_code: {
+    type: String,
+    trim: true,
+  },
+});
+
+const TechnicalGroupSchema = new mongoose.Schema({
+  groupCode: {
+    type: String,
+    trim: true,
+  },
+  groupDesc: {
+    type: String,
+    trim: true,
+  },
+});
+
+const APSDEFSchema = new mongoose.Schema({
+  apsID: {
+    type: String,
+    trim: true,
+  },
+  apsName: {
+    type: String,
+    trim: true,
+  },
+  apsFullName: {
+    type: String,
+    trim: true,
+  },
+  apsURL: {
+    type: String,
+    trim: true,
+  },
+  temp: {
+    type: String,
+    trim: true,
+  },
+  presidentID: {
+    type: String,
+    trim: true,
+  },
+  isActive: {
+    type: String,
+    trim: true,
+  },
+});
+
+const SPECIALITYDEFSchema = new mongoose.Schema({
+  SS_ID: {
+    type: String,
+    trim: true,
+  },
+  SubSpecialtyCode: {
+    type: String,
+    trim: true,
+  },
+  SubSpecialtyDesc: {
+    type: String,
+    trim: true,
+  },
+  MainSpecialtyCode: {
+    type: String,
+    trim: true,
+  },
+  MainSpecialtyDesc: {
+    type: String,
+    trim: true,
+  },
+  NRFCode: {
+    type: String,
+    trim: true,
+  },
+});
+
 const UserSchema = new mongoose.Schema({
   memberId: {
     type: String,
@@ -48,11 +163,11 @@ const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     trim: true,
-    validate(value) {
-      if (!validator.isEmail(value)) {
-        throw new Error("Email is invalid");
-      }
-    },
+    // validate(value) {
+    //   if (!validator.isEmail(value)) {
+    //     throw new Error("Email is invalid");
+    //   }
+    // },
   },
   homepageUrl: {
     type: String,
@@ -290,8 +405,52 @@ const UserSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-  
-  
+
+  chapterCode: {
+    type: String,
+    trim: true,
+  },
+
+  chapter: {
+    type: ChapterCodeSchema,
+  },
+
+  groupCode: {
+    type: String,
+    trim: true,
+  },
+
+  group: {
+    type: TechnicalGroupSchema,
+  },
+
+  apsList: {
+    type: [APSDEFSchema],
+  },
+
+  aps1: {
+    type: APSDEFSchema,
+  },
+  aps2: {
+    type: APSDEFSchema,
+  },
+  aps3: {
+    type: APSDEFSchema,
+  },
+
+  specialtyList: {
+    type: [SPECIALITYDEFSchema],
+  },
+
+  specialty1: {
+    type: SPECIALITYDEFSchema,
+  },
+  specialty2: {
+    type: SPECIALITYDEFSchema,
+  },
+  specialty3: {
+    type: SPECIALITYDEFSchema,
+  },
 
   saveDate: {
     type: Date,
@@ -299,7 +458,6 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-// 모델 생성
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;

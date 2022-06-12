@@ -1,7 +1,10 @@
-<div class="wrap-con">
+<div *ngIf="blockedDocument" class="card">
+    <p-progressBar mode="indeterminate" [style]="{'height': '6px'}"></p-progressBar>
+</div>
+
+<div *ngIf="!blockedDocument" class="wrap-con">
     <div class="wrap-title">
         <h2>APS Member Chart</h2>
-        <button class="btn_blue" type="button" (click)="reload()">Reload!</button>
     </div>
     <p-chart type="bar" [data]="basicData" [options]="stackedOptions"></p-chart>
     <div class="wrap-sub-title">

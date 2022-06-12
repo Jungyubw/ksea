@@ -9,9 +9,8 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['../admin-common.scss', './technical-group.component.scss']
 })
 export class TechnicalGroupComponent implements OnInit {
-
-
   technialGroups: Technical_Group[] = [];
+
   newItem: Technical_Group = {
     groupCode: '',
     groupDesc: ''
@@ -24,76 +23,106 @@ export class TechnicalGroupComponent implements OnInit {
 
   displayAddTG = false;
 
+  blockedDocument: boolean = true;
+
   constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.blockedDocument = true;
+    this.users = this.userService.getUsers();
+    this.technialGroups = this.userService.getGroups();
+
+    if (!this.users || this.users.length === 0) {
+      this.userService.retriveUsers().subscribe(u_data => {
+        this.users = <User[]>u_data;
+        this.userService.setUsers(this.users);
+
+        if (!this.technialGroups || this.technialGroups.length === 0) {
+          this.userService.retriveGroups().subscribe(c_data => {
+            this.technialGroups = <Technical_Group[]>c_data;
+            this.userService.setGroups(this.technialGroups);
+            this.reload();
+            this.blockedDocument = false;
+          });
+        }
+      });
+    } else {
+      if (!this.technialGroups || this.technialGroups.length === 0) {
+        this.userService.retriveGroups().subscribe(c_data => {
+          this.technialGroups = <Technical_Group[]>c_data;
+          this.userService.setGroups(this.technialGroups);
+          this.reload();
+          this.blockedDocument = false;
+        });
+      } else {
+        this.reload();
+        this.blockedDocument = false;
+      }
+    }
+
     this.stackedOptions = {
       plugins: {
-          tooltips: {
-              mode: 'index',
-              intersect: false
-          },
-          legend: {
-              labels: {
-                  color: '#495057'
-              }
+        tooltips: {
+          mode: 'index',
+          intersect: false
+        },
+        legend: {
+          labels: {
+            color: '#495057'
           }
+        }
       },
       scales: {
-          x: {
-              stacked: true,
-              ticks: {
-                  color: '#495057'
-              },
-              grid: {
-                  color: '#ebedef'
-              }
+        x: {
+          stacked: true,
+          ticks: {
+            color: '#495057'
           },
-          y: {
-              stacked: true,
-              ticks: {
-                  color: '#495057'
-              },
-              grid: {
-                  color: '#ebedef'
-              }
+          grid: {
+            color: '#ebedef'
           }
+        },
+        y: {
+          stacked: true,
+          ticks: {
+            color: '#495057'
+          },
+          grid: {
+            color: '#ebedef'
+          }
+        }
       }
     };
 
   }
 
-  reload(){
-    this.technialGroups = this.userService.getGroups();
-
-    let labels : string[] = [];
+  reload() {
+    let labels: string[] = [];
 
     this.technialGroups.forEach(g => labels.push(g.groupCode));
-
-    this.users = this.userService.getUsers();
 
     let dataMap = new Map();
 
     this.users.forEach(user => {
-      if(!dataMap.get(user.groupCode)) dataMap.set(user.groupCode, {total: 0, r:0, g:0, u: 0, i:0, s:0, h:0, other:0});
+      if (!dataMap.get(user.groupCode)) dataMap.set(user.groupCode, { total: 0, r: 0, g: 0, u: 0, i: 0, s: 0, h: 0, other: 0 });
       dataMap.get(user.groupCode).total = dataMap.get(user.groupCode).total + 1;
 
-      if(user.memberType === 'U'){
+      if (user.memberType === 'U') {
         dataMap.get(user.groupCode).u = dataMap.get(user.groupCode).u + 1;
       }
-      else if(user.memberType === 'R'){
+      else if (user.memberType === 'R') {
         dataMap.get(user.groupCode).r = dataMap.get(user.groupCode).r + 1;
       }
-      else if(user.memberType === 'G'){
+      else if (user.memberType === 'G') {
         dataMap.get(user.groupCode).g = dataMap.get(user.groupCode).g + 1;
       }
-      else if(user.memberType === 'H'){
+      else if (user.memberType === 'H') {
         dataMap.get(user.groupCode).h = dataMap.get(user.groupCode).h + 1;
       }
-      else if(user.memberType === 'I'){
+      else if (user.memberType === 'I') {
         dataMap.get(user.groupCode).i = dataMap.get(user.groupCode).i + 1;
       }
-      else if(user.memberType === 'S'){
+      else if (user.memberType === 'S') {
         dataMap.get(user.groupCode).s = dataMap.get(user.groupCode).s + 1;
       }
       else {
@@ -112,7 +141,7 @@ export class TechnicalGroupComponent implements OnInit {
     let unknowns: number[] = [];
     this.technialGroups.forEach(g => {
 
-      if(dataMap.get(g.groupCode)) {
+      if (dataMap.get(g.groupCode)) {
         totals.push(dataMap.get(g.groupCode).total);
         regulars.push(dataMap.get(g.groupCode).r);
         undergraduates.push(dataMap.get(g.groupCode).u);
@@ -131,7 +160,7 @@ export class TechnicalGroupComponent implements OnInit {
         stypes.push(0);
         unknowns.push(0);
       }
-  });
+    });
 
     this.basicData = {
       labels: labels,
@@ -140,37 +169,37 @@ export class TechnicalGroupComponent implements OnInit {
         label: 'Regular',
         backgroundColor: '#42A5F5',
         data: regulars
-    }, {
+      }, {
         type: 'bar',
         label: 'Undergraduate',
         backgroundColor: '#66BB6A',
         data: undergraduates
-    }, {
+      }, {
         type: 'bar',
         label: 'Graduate',
         backgroundColor: '#FFA726',
         data: graduates
-    }, {
-      type: 'bar',
-      label: 'Honorary',
-      backgroundColor: '#FFD700',
-      data: honorarys
-    }, {
-      type: 'bar',
-      label: 'International',
-      backgroundColor: '#FA8072',
-      data: internationals
-    }, {
-      type: 'bar',
-      label: 'S types??',
-      backgroundColor: '#C0C0C0',
-      data: stypes
-    }, {
-      type: 'bar',
-      label: 'Unknowns',
-      backgroundColor: '#000000',
-      data: unknowns
-    }]
+      }, {
+        type: 'bar',
+        label: 'Honorary',
+        backgroundColor: '#FFD700',
+        data: honorarys
+      }, {
+        type: 'bar',
+        label: 'International',
+        backgroundColor: '#FA8072',
+        data: internationals
+      }, {
+        type: 'bar',
+        label: 'S types??',
+        backgroundColor: '#C0C0C0',
+        data: stypes
+      }, {
+        type: 'bar',
+        label: 'Unknowns',
+        backgroundColor: '#000000',
+        data: unknowns
+      }]
     };
   }
   showAdd() {

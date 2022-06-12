@@ -8,4 +8,6 @@ router.get("/:id", userController.userRead);
 router.patch("/:id", userController.userUpdate);
 router.delete("/:id", userController.userDelete);
 
+router.get("/init/CSVLoad", userController.initUsers);
+
 module.exports = router;

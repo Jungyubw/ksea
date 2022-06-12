@@ -6,6 +6,9 @@ import {DialogModule} from 'primeng/dialog';
 import {PaginatorModule} from 'primeng/paginator';
 import {TableModule} from 'primeng/table';
 import {ChartModule} from 'primeng/chart';
+import {BlockUIModule} from 'primeng/blockui';
+import {ProgressBarModule} from 'primeng/progressbar';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -64,7 +67,9 @@ import { OrganizationComponent } from './front/organization/organization.compone
     TableModule,
     ChartModule,
     HttpClientModule,
-    NgxCsvParserModule
+    NgxCsvParserModule,
+    BlockUIModule,
+    ProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

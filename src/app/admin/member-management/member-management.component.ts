@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/user';
 import { UserService } from 'src/app/services/user.service';
-
 @Component({
   selector: 'app-member-management',
   templateUrl: './member-management.component.html',
@@ -10,19 +9,33 @@ import { UserService } from 'src/app/services/user.service';
 export class MemberManagementComponent implements OnInit {
   users: User[] = [];
   selectedUsers: User[] = [];
-  selectedUsersEmails:string='';
+  selectedUsersEmails: string = '';
 
   displaySendEmail = false;
+
+  blockedDocument: boolean = true;
+
   constructor(private userService: UserService) { }
 
-  ngOnInit(): void {
-  }
-  reload(){
+
+  ngOnInit() {
+    this.blockedDocument = true;
     this.users = this.userService.getUsers();
+
+    if(!this.users || this.users.length === 0) {
+      this.userService.retriveUsers().subscribe(u_data => {
+        this.users = <User[]>u_data;
+        this.userService.setUsers(this.users);
+        this.blockedDocument = false;
+      });
+    } else {
+      this.blockedDocument = false;
+    }
   }
+
   showSendEmail() {
-    this.displaySendEmail  = !this.displaySendEmail ;
-    this.selectedUsersEmails =  this.getEmails();
+    this.displaySendEmail = !this.displaySendEmail;
+    this.selectedUsersEmails = this.getEmails();
   }
 
   deleteAccounts() {
@@ -34,12 +47,12 @@ export class MemberManagementComponent implements OnInit {
     this.displaySendEmail = false;
   }
 
-  getEmails(){
-    let result:string[] = [];
+  getEmails() {
+    let result: string[] = [];
     this.selectedUsers.forEach(u => {
-      if(u.email && u.email.indexOf('@') > 0) result.push(u.email);
+      if (u.email && u.email.indexOf('@') > 0) result.push(u.email);
     });
-    
+
     return result.toString();
   }
 }

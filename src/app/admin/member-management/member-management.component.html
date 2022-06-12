@@ -1,7 +1,10 @@
-<div class="wrap-con">
+<div *ngIf="blockedDocument" class="card">
+    <p-progressBar mode="indeterminate" [style]="{'height': '6px'}"></p-progressBar>
+</div>
+
+<div *ngIf="!blockedDocument" class="wrap-con">
     <div class="wrap-title">
         <h2>Users Tables</h2>
-        <button class="btn_blue" type="button" (click)="reload()">Reload!</button>
         <button class="btn_deep_gray" type="button" (click)="showSendEmail()">Send Email</button>
         <button class="btn_red" type="button" (click)="deleteAccounts()">Del Accounts</button>
     </div>
