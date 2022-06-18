@@ -1,0 +1,81 @@
+﻿chapterCode,chapterType,chapterName,chapterLoc,chapterUrl,subDomain,presidentId,MDId,dateApproved,kseaId,pro_code
+0,H,Headquarter,HQ,http://www.ksea.org,,102881,NULL,2021-07-01 00:00:00,NULL,KSEA
+1,C,Central Pennsylvania,PA01," http://sites.psu.edu/ksea",,68074,NULL,NULL,24954,HAPA
+2,C,Connecticut,CT01,,,100520,NULL,NULL,6495,NULL
+3,C,Georgia,GA01,https://sites.google.com/site/kseagaweb,,71941,NULL,NULL,14917,ATGA
+4,C,Indiana,IN01,http://in.ksea.org/,,66522,NULL,NULL,15359,LAIN
+6,C,Michigan,MI01,http://mi.ksea.org/,,89124,NULL,NULL,14787,ANMI
+7,C,Chicagoland,IL01,http://chicagoland.ksea.org/,,75497,NULL,NULL,NULL,CHIL
+8,C,Minnesota,MN01,,,81091,NULL,NULL,726574,MIMN
+9,C,New England,MA01,http://www.kseane.org,,79062,NULL,NULL,625872,CONH
+10,C,New Jersey,NJ01,http://www.ksea-nj.org,,91444,NULL,NULL,14707,TRNJ
+11,C,New York Metropolitan,NY01,http://www.kseany.org,,72341,NULL,NULL,8196,NYNY
+12,C,North Carolina,NC01,http://nc.ksea.org,,72425,NULL,NULL,6819,CHNC
+13,B,Northern CA,CA01,,,NULL,NULL,NULL,9385,NULL
+14,C,Ohio,OH01,http://oh.ksea.org,,102223,NULL,NULL,11653,COOH
+15,C,Seattle,WA01,http://seattle.ksea.org,,65424,NULL,NULL,12186,SEWA
+16,C,Philadelphia,PA02,,,95017,NULL,NULL,727448,PEPA
+17,B,St. Louis,MO03,http://stl.ksea.org,,102940,NULL,NULL,NULL,STMO
+18,C,Southern CA,CA02,http://www.ksea-sc.org,,76499,NULL,NULL,24361,LOCA
+19,C,South Texas,TX01,http://www.ksea-st.org,,69491,NULL,NULL,24619,HOTX
+20,B,Upstate NY,NY02,,,NULL,NULL,NULL,6851,NULL
+21,C,Washington Metro,MD01,http://dc.ksea.org,,85584,NULL,NULL,12657,WADC
+22,B,West Penn,PA03,,,NULL,NULL,NULL,NULL,NULL
+23,C,Alabama,AL01,http://al.ksea.org/,,92244,NULL,NULL,726781,TUAL
+24,C,Austin TX,TX02,http://austin.ksea.org,,87762,NULL,NULL,12581,AUTX
+25,B,Las Vegas,NV02,http://www.me.unlv.edu/~jslee/,,NULL,NULL,NULL,NULL,NULL
+26,B,Colorado,CO01,,,NULL,NULL,NULL,NULL,NULL
+29,B,West VA,WV01,,,NULL,NULL,NULL,NULL,NULL
+30,C,Silicon Valley,CA05,http://www.ksea-siv.org,,NULL,NULL,NULL,,SJCA
+31,C,Baltimore,MD02,,,75014,NULL,NULL,13776,BAMD
+32,C,Tennessee,TN01,,,89672,NULL,NULL,NULL,KNTN
+33,B,NE-Ohio,OH02,,,NULL,NULL,NULL,NULL,NULL
+35,B,Rolla MO,MO01,,,NULL,NULL,NULL,12059,NULL
+36,B,Kansas MO,KS01,,,NULL,NULL,NULL,13597,NULL
+37,B,Oklahoma,OK01,,,NULL,NULL,NULL,13386,NULL
+38,B,NE New York,NY02,,,NULL,NULL,NULL,NULL,NULL
+39,B,SE VA,VA01,,,NULL,NULL,NULL,626344,NULL
+40,C,North TX,TX03,http://nt.ksea.org/,,81148,NULL,NULL,727054,ARTX
+41,C,Central VA,VA02,http://cva.ksea.org/,,94451,NULL,NULL,NULL,CHVA
+42,C,Central IL,IL02,,,67773,NULL,NULL,24650,URIL
+43,C,Nebraska,NE01,,,80238,NULL,NULL,NULL,NULL
+44,C,Wisconsin,WI01,https://www.kseawisc.org/,,97247,NULL,NULL,NULL,MAWI
+45,B,New Mexico,NM01,,,NULL,NULL,NULL,NULL,NULL
+46,B,Lehigh Valley,PA04,,,NULL,NULL,NULL,13113,NULL
+47,B,S. Carolina,SC01,,,NULL,NULL,NULL,24660,NULL
+999,C,None or Unknown,NONE,,,NULL,NULL,NULL,,
+49,C,Southern VA,VA03,http://sva.ksea.org/,,66914,NULL,NULL,10329,BLVA
+50,B,Western NY,NY03,,,NULL,NULL,NULL,NULL,NULL
+51,B,Great Lakes reg.,MI02,,,NULL,NULL,NULL,NULL,NULL
+52,B,Iowa city,IA01,,,94099,NULL,NULL,24979,IOIW
+53,B,Central Iowa,IA02,,,NULL,NULL,NULL,827854,IOIW
+54,B,Mid MO,MO02,,,NULL,NULL,NULL,NULL,NULL
+55,B,Louisiana,LA01,,,NULL,NULL,NULL,13388,NULL
+56,C,Utah,UT01,http://utah.ksea.org,,81662,NULL,NULL,NULL,SLUT
+57,B,Northwest,WA02,,,NULL,NULL,NULL,727342,NULL
+58,C,Sacramento,CA03,http://svc.ksea.org/,,69001,NULL,NULL,625861,SACA
+59,B,N.Florida,FL02,,,NULL,NULL,NULL,25091,NULL
+60,C,San Diego,CA04,http://www.kseasd.org/,,68406,NULL,NULL,13420,SDCA
+61,B,Mississippi MS,MS01,,,NULL,NULL,NULL,14849,NULL
+62,B,Oregon,OR01,http://ksea-or.org/,,NULL,NULL,NULL,25188,POOR
+63,B,Nevada,NV01,,,NULL,NULL,NULL,NULL,NULL
+64,B,Dayton-OH,OH03,,,64585,NULL,NULL,,NULL
+65,B,North Dakota,ND01,,,NULL,NULL,NULL,NULL,BIND
+66,B,Peoria-IL,IL03,,,NULL,NULL,NULL,,NULL
+67,C,Orlando Central Florida,FL03,,,82403,NULL,NULL,,ORFL
+68,C,Tampa Bay,FL04,,,80126,NULL,NULL,NULL,TAFL
+69,C,Idaho,ID01,http://boise.ksea.org,,76735,NULL,NULL,NULL,BOID
+70,C,Berkeley,CA06,http://berkeley.ksea.org,,103766,NULL,NULL,,BECA
+71,C,Gainesville FL,FL05,www.phys.ufl.edu/~yoonslee,,81568,NULL,NULL,,GAFL
+72,C,Arkansas,AR01,http://ar.ksea.org/,,102261,NULL,NULL,,LIAK
+73,C,Southwest Ohio,SO01,,,NULL,NULL,NULL,,CIOH
+74,B,Nashville,"TN02      ",,,86538,NULL,NULL,,NATN
+75,B,Central Oregon,COR,,,NULL,NULL,NULL,,NULL
+76,C,Eastern Carolina,EC01,,,81120,NULL,NULL,1237994,EANC
+77,C,Texas Coastal Bend,TX04,,,100480,NULL,NULL,,TXCB
+900,B,KFDA,KR11,,,NULL,NULL,NULL,NULL,NULL
+901,B,KJIST,KR10,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+903,C,Kentucky,KY01,,,73969,NULL,NULL,NULL,FRKY
+905,F,"KSEA Korea ",KR02,,,NULL,NULL,NULL,NULL,NULL
+906,B,KSEA International,INT01,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+907,B,KSEA Canada,INT02,NULL,NULL,NULL,NULL,NULL,NULL,NULL

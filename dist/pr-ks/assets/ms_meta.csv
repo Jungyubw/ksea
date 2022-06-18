@@ -1,0 +1,71 @@
+﻿SM_ID,MainSpecialtyCode,MainSpecialtyDesc
+1,101,Mathematics -I
+2,102,Mathematics -II
+3,103,"Mathematics - Applied "
+4,104,Statistics
+5,111,Physics-Basic
+6,112,Physics - Theory & Computation
+7,113,Physics -Astronomy
+8,114,Physics -Condensed Matter
+9,121,Chemistry- Physical
+10,122,Chemistry- Inorganic
+11,123,Chemistry-Organic
+12,124,Chemistry-Analytical
+13,131,Geological Science
+14,132,Earth Science-Chemical
+15,133,Earth Science-Physical
+16,134,Meteorology
+17,135,Oceanography
+18,136,Geography
+19,201,Ecology
+20,202,Microbiology
+21,203,Botany
+22,204,Zoology
+23,205,Medical Science
+24,206,Medical Pathology
+25,207,Cell Biology
+26,208,"Cancer "
+27,209,Biochemistry
+28,210,Genetics
+29,211,Bioengineering
+30,212,Immunology
+31,213,Neuro Science
+32,214,Physiology &Pharmacology
+33,215,Pharmaceutical Chemistry
+34,216,Pharmacognosy
+35,217,Pharmacy
+36,218,Pharmacy-Hygiene
+37,219,Epidemiology
+38,220,Food & Nutrition
+39,221,Agriculture
+40,222,Veterinary Medicine
+41,223,Fishery
+42,301,Materials Engineering
+43,302,Electrical Engineering
+44,303,Computer Science
+45,304,Mechanical Engineering
+46,305,Aerospace and Ocean Engineering
+47,306,Nuclear Engineering
+48,307,Chemical Engineering
+49,308,Polymer Science
+50,309,Environmental Engineering
+51,310,Architectural Engineering
+52,311,Civil Engineering
+53,312,Mining Engineering
+54,313,Transportation Engineering
+55,314,Biomedical Engineering
+56,315,Industrial Engineering
+57,316,Agricultural Engineering
+58,317,Forest Engineering
+59,318,Textile Engineering
+60,501,Science Education
+61,502,Science History
+62,503,Science Policy
+63,511,Informatics
+64,512,Information Technology
+65,513,Information System
+66,514,Multimedia
+67,515,Electronic Commerce
+68,521,Psychological Science
+69,522,Cognitive Science
+70,999,Others

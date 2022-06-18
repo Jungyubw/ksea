@@ -130,6 +130,7 @@ exports.initSpecialty = async (req, res) => {
 
     fs.readFile(process.cwd() + "/src/assets/ms_meta.csv", 'utf8', (err, ms_meta_data) => {
       if (err) {
+        console.log(err);
         return;
       }
       papa.parse(ms_meta_data, {
@@ -141,6 +142,7 @@ exports.initSpecialty = async (req, res) => {
           const msDefs = results.data;
           fs.readFile(process.cwd() + "/src/assets/ss_meta.csv", 'utf8', (err, ss_meta_data) => {
             if (err) {
+              console.log(err);
               return;
             }
             papa.parse(ss_meta_data, {
