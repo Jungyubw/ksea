@@ -118,8 +118,10 @@ h2 {
     width: 30rem;
 }
 .con-ksea-leatter > div {
-    margin-top: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
     line-height: 2;
+    font-size: 1.25rem;
 } 
 .wrap-ad-banner {
     margin-top: 10em;
@@ -149,4 +151,11 @@ h2 {
 .con-ad-banner li > img {
     width: 12rem;
     object-fit: cover;
+}
+.btn_orange {
+    background-color: #FF9140;
+    width: 10rem;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.3em 1rem;
 }
